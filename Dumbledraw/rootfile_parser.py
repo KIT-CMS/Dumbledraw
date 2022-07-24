@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 class Rootfile_parser(object):
-    def __init__(self, inputrootfilename, mode="CombineHarvester"):
+    def __init__(self, inputrootfilename, mode="CombineHarvester", prefit=False):
         self._rootfilename = inputrootfilename
         self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._type = "control"
@@ -17,9 +17,10 @@ class Rootfile_parser(object):
         for entry in content:
             if entry.endswith("prefit"):
                 self._type = "prefit"
-        for entry in content:
-            if entry.endswith("postfit"):
-                self._type = "postfit"
+        if not prefit:
+            for entry in content:
+                if entry.endswith("postfit"):
+                    self._type = "postfit"
         logger.debug(
             "Identified rootfile %s as %s shapes" % (inputrootfilename, self._type)
         )
