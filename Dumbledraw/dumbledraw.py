@@ -142,9 +142,11 @@ class Plot(object):
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
 
-    def DrawCMS(self, position=0, preliminary=True):
+    def DrawCMS(self, position=0, preliminary=True, own_work=False):
         if preliminary:
             additional_string = "Preliminary"
+        if own_work:
+            additional_string = "Own Work"
         else:
             additional_string = ""
         if position == 0:
@@ -153,7 +155,7 @@ class Plot(object):
                 "CMS",
                 additional_string,
                 11,
-                0.045,
+                0.095,
                 0.05,
                 1.0,
                 "",
