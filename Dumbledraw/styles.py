@@ -36,6 +36,7 @@ color_dict = {
     "inclusive": R.TColor.GetColor(254, 74, 73),
     "ZTT": R.TColor.GetColor(248, 206, 104),
     "EMB": R.TColor.GetColor(248, 206, 104),
+    "MUEMB": R.TColor.GetColor(100, 192, 232),
     "ZLL": R.TColor.GetColor(100, 192, 232),
     "ZL": R.TColor.GetColor(100, 192, 232),
     "ZJ": R.TColor.GetColor("#64DE6A"),

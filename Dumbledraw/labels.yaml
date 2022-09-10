@@ -548,6 +548,7 @@ legend_label:
   ZTT: "Z#rightarrow#tau#tau"
   EMB: "#tau embedded"
   EMBCMB: "Z/t#bar{t}/VV#rightarrow#tau#tau"
+  MUEMB: "#mu#rightarrow#mu embedded"
   TotalBkg: "Background"
   REST: "Sim. Bkg."
   ZLL: "Z#rightarrowll"
