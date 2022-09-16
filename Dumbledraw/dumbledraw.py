@@ -22,6 +22,7 @@ class Plot(object):
         self._subplots = []
         self._legends = []
         self._lines = []
+        self._inlet_lines = []
         self._inlets = []
         self._inlets_legends = []
         # evaluate splitlist and book
@@ -102,6 +103,15 @@ class Plot(object):
             raise Exception
         return self._lines[index]
 
+    def inlet_line(self, index):
+        if not isinstance(index, int):
+            logger.fatal("Line index is supposed to be of type int!")
+            raise Exception
+        if index >= len(self._inlet_lines):
+            logger.fatal("Line index is out of range!")
+            raise Exception
+        return self._inlet_lines[index]
+
     def save(self, outputname):
         self._canvas.SaveAs(outputname)
         logger.info("Created %s" % outputname)
@@ -128,8 +138,8 @@ class Plot(object):
             latex2.SetTextFont(42)
             latex2.SetTextAngle(0)
             latex2.SetTextColor(R.kBlack)
-            latex2.SetTextSize(0.02)
-            latex2.DrawLatex(0.39, 0.720, text)
+            latex2.SetTextSize(0.04)
+            latex2.DrawLatex(0.19, 0.720, text)
         else:
             ypos = 0.960 if "_{" in text else 0.955
             latex2 = R.TLatex()
@@ -141,14 +151,27 @@ class Plot(object):
             if begin_left == None:
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
-
-    def DrawCMS(self, position=0, preliminary=True, own_work=False):
+    def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False):
         if preliminary:
             additional_string = "Preliminary"
         if own_work:
             additional_string = "Own Work"
         else:
             additional_string = ""
+        if subtext != "":
+            additional_string += subtext
+        if position==0:
+            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
+                               0.045, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
+        elif position=="outside":
+            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 0,
+                               0.095, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
+        elif position=="legend_outside":
+            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
+                               0.045, 0.05, 1.0, '', cmsTextSize=0.4, extraOverCmsTextSize=0.8, extraTextFont=42)
+        else:
+            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
+                               0.795, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
         if position == 0:
             styles.DrawCMSLogo(
                 self._subplots[0]._pad,
@@ -206,7 +229,7 @@ class Plot(object):
             latex2.SetTextAngle(0)
             latex2.SetTextColor(R.kBlack)
             latex2.SetTextSize(0.03)
-            latex2.DrawLatex(0.75, 0.950, lumi)
+            latex2.DrawLatex(0.75, 0.88, lumi)
         else:
             styles.DrawTitle(self._subplots[0]._pad, lumi, 3, textsize)
 
