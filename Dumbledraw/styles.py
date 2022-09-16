@@ -21,17 +21,26 @@ legend_label_dict = yaml.load(open(labels_path))['legend_label']
 x_label_dict = yaml.load(open(labels_path))['x_label']
 
 color_dict = {
-    "ggH": R.TColor.GetColor("#fed766"),
-    "qqH": R.TColor.GetColor("#2ab7ca"),
-    "VH": R.TColor.GetColor("#001EFF"),
-    "WH": R.TColor.GetColor("#001EFF"),
-    "ZH": R.TColor.GetColor("#001EFF"),
+#    "ggH": R.TColor.GetColor("#fed766"),
+#    "qqH": R.TColor.GetColor("#2ab7ca"),
+#    "VH": R.TColor.GetColor("#001EFF"),
+#    "WH": R.TColor.GetColor("#001EFF"),
+#    "ZH": R.TColor.GetColor("#001EFF"),
+    "ggH": R.TColor.GetColor("#001EFF"),
+    "qqH": R.TColor.GetColor("#fc6203"),
+    "inclusive": R.TColor.GetColor("#d90021"), ##ba001c"),
+    "VH": R.TColor.GetColor("#2ab7ca"),
+    "WH": R.TColor.GetColor("#2ab7ca"),
+    "ZH": R.TColor.GetColor("#2ab7ca"),
     "ttH": R.TColor.GetColor("#FF00FF"),
-    "HWW": R.TColor.GetColor("#FF8C00"),
-    "ggH_hww": R.TColor.GetColor("#FF8C00"),
-    "qqH_hww": R.TColor.GetColor("#FF8C00"),
+#    "HWW": R.TColor.GetColor("#FF8C00"),
+#    "ggH_hww": R.TColor.GetColor("#FF8C00"),
+#    "qqH_hww": R.TColor.GetColor("#FF8C00"),
+    "HWW": R.TColor.GetColor("#006106"),
+    "ggH_hww": R.TColor.GetColor("#006106"),
+    "qqH_hww": R.TColor.GetColor("#006106"),
     "dummy": R.TColor.GetColor(254, 74, 73),
-    "inclusive": R.TColor.GetColor(254, 74, 73),
+#    "inclusive": R.TColor.GetColor(254, 74, 73),
     "ZTT": R.TColor.GetColor(248, 206, 104),
     "EMB": R.TColor.GetColor(248, 206, 104),
     "ZLL": R.TColor.GetColor(100, 192, 232),
@@ -64,6 +73,7 @@ color_dict = {
     "jetFakesTT": R.TColor.GetColor(155, 152, 204),
     "jetFakesEMB": R.TColor.GetColor(192, 232, 100),
     "jetFakesCMB": R.TColor.GetColor(250, 202, 255),
+    #"jetFakesCMB": R.TColor.GetColor(192, 232, 100),
     "TotalBkg": R.TColor.GetColor(211,211,211),
     "REST": R.TColor.GetColor("#B0C4DE"),
     "unc": CreateTransparentColor(12, 0.4)
@@ -268,6 +278,8 @@ def ModTDRStyle(width=600, height=600, t=0.06, b=0.12, l=0.16, r=0.04):
     # Set number of axis tick divisions
     R.gStyle.SetNdivisions(506, 'XYZ')  # default 510
 
+    R.TGaxis.SetMaxDigits(4)
+
     # Some marker properties not set in the default tdr style
     R.gStyle.SetMarkerColor(R.kBlack)
     R.gStyle.SetMarkerSize(1.0)
@@ -360,6 +372,8 @@ def DrawCMSLogo(pad,
                 relPosY,
                 relExtraDY,
                 extraText2='',
+                extraOverCmsTextSize=0.5,
+                extraTextFont=52,
                 cmsTextSize=0.8):
     """Blah
     
@@ -382,7 +396,6 @@ def DrawCMSLogo(pad,
 
     writeExtraText = len(extraText) > 0
     writeExtraText2 = len(extraText2) > 0
-    extraTextFont = 52
 
     # text sizes and text offsets with respect to the top frame
     # in unit of the top margin size
@@ -391,7 +404,6 @@ def DrawCMSLogo(pad,
     # float cmsTextOffset    = 0.1;  // only used in outOfFrame version
 
     # ratio of 'CMS' and extra text size
-    extraOverCmsTextSize = 0.76
     outOfFrame = False
     if iPosX / 10 == 0:
         outOfFrame = True
@@ -469,7 +481,7 @@ def DrawCMSLogo(pad,
         latex.DrawLatex(posX_, posY_, extraText)
 
 
-def DrawTitle(pad, text, align, textSize=0.6):
+def DrawTitle(pad, text, align, textSize=0.6, textfont=42):
     pad_backup = R.gPad
     pad.cd()
     t = pad.GetTopMargin()
@@ -487,7 +499,7 @@ def DrawTitle(pad, text, align, textSize=0.6):
     latex.SetNDC()
     latex.SetTextAngle(0)
     latex.SetTextColor(R.kBlack)
-    latex.SetTextFont(42)
+    latex.SetTextFont(textfont)
     latex.SetTextSize(textSize * t * pad_ratio)
 
     y_off = 1 - t + textOffset * t + 0.0055
