@@ -382,7 +382,7 @@ def DrawCMSLogo(pad,
                 relPosY,
                 relExtraDY,
                 extraText2='',
-                extraOverCmsTextSize=0.5,
+                extraOverCmsTextSize=0.76,
                 extraTextFont=52,
                 cmsTextSize=0.8):
     """Blah
@@ -406,10 +406,9 @@ def DrawCMSLogo(pad,
 
     writeExtraText = len(extraText) > 0
     writeExtraText2 = len(extraText2) > 0
-
+    extraTextFont = 52
     # text sizes and text offsets with respect to the top frame
     # in unit of the top margin size
-    lumiTextOffset = 0.2
     # cmsTextSize = 0.8
     # float cmsTextOffset    = 0.1;  // only used in outOfFrame version
 

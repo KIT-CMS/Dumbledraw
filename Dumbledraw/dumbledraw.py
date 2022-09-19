@@ -151,38 +151,30 @@ class Plot(object):
             if begin_left == None:
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
+
     def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False):
-        if preliminary:
-            additional_string = "Preliminary"
-        if own_work:
-            additional_string = "Own Work"
-        else:
-            additional_string = ""
+        additional_string = ""
         if subtext != "":
-            additional_string += subtext
-        if position==0:
-            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
-                               0.045, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
-        elif position=="outside":
-            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 0,
-                               0.095, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
-        elif position=="legend_outside":
-            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
-                               0.045, 0.05, 1.0, '', cmsTextSize=0.4, extraOverCmsTextSize=0.8, extraTextFont=42)
+            additional_string = subtext
         else:
-            styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', additional_string , 11,
-                               0.795, 0.05, 1.0, '', cmsTextSize=0.6, extraOverCmsTextSize=0.8, extraTextFont=42)
+            if preliminary:
+                additional_string = "Preliminary"
+            if own_work:
+                additional_string = "Own Work"
+
         if position == 0:
             styles.DrawCMSLogo(
                 self._subplots[0]._pad,
                 "CMS",
                 additional_string,
                 11,
-                0.095,
+                0.115,
                 0.05,
                 1.0,
                 "",
-                0.6,
+                cmsTextSize=0.6,
+                extraOverCmsTextSize=0.8,
+                extraTextFont=42,
             )
         elif position == "outside":
             styles.DrawCMSLogo(
@@ -194,7 +186,9 @@ class Plot(object):
                 0.05,
                 1.0,
                 "",
-                0.6,
+                cmsTextSize=0.6,
+                extraOverCmsTextSize=0.8,
+                extraTextFont=42,
             )
         elif position == "legend_outside":
             styles.DrawCMSLogo(
@@ -206,7 +200,9 @@ class Plot(object):
                 0.05,
                 1.0,
                 "",
-                0.4,
+                cmsTextSize=0.4,
+                extraOverCmsTextSize=0.8,
+                extraTextFont=42,
             )
         else:
             styles.DrawCMSLogo(
@@ -218,7 +214,9 @@ class Plot(object):
                 0.05,
                 1.0,
                 "",
-                0.6,
+                cmsTextSize=0.6,
+                extraOverCmsTextSize=0.8,
+                extraTextFont=42,
             )
 
     def DrawLumi(self, lumi, textsize=0.6, legend_outside=False):
