@@ -152,7 +152,7 @@ class Plot(object):
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
 
-    def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False):
+    def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False, thesisstyle=False):
         additional_string = ""
         if subtext != "":
             additional_string = subtext
@@ -175,6 +175,7 @@ class Plot(object):
                 cmsTextSize=0.6,
                 extraOverCmsTextSize=0.8,
                 extraTextFont=42,
+                thesisstyle=thesisstyle,
             )
         elif position == "outside":
             styles.DrawCMSLogo(
@@ -189,6 +190,7 @@ class Plot(object):
                 cmsTextSize=0.6,
                 extraOverCmsTextSize=0.8,
                 extraTextFont=42,
+                thesisstyle=thesisstyle,
             )
         elif position == "legend_outside":
             styles.DrawCMSLogo(
@@ -203,6 +205,7 @@ class Plot(object):
                 cmsTextSize=0.4,
                 extraOverCmsTextSize=0.8,
                 extraTextFont=42,
+                thesisstyle=thesisstyle,
             )
         else:
             styles.DrawCMSLogo(
@@ -217,6 +220,7 @@ class Plot(object):
                 cmsTextSize=0.6,
                 extraOverCmsTextSize=0.8,
                 extraTextFont=42,
+                thesisstyle=thesisstyle,
             )
 
     def DrawLumi(self, lumi, textsize=0.6, legend_outside=False):

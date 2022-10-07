@@ -384,7 +384,8 @@ def DrawCMSLogo(pad,
                 extraText2='',
                 extraOverCmsTextSize=0.76,
                 extraTextFont=52,
-                cmsTextSize=0.8):
+                cmsTextSize=0.8,
+                thesisstyle=False):
     """Blah
 
     Args:
@@ -403,7 +404,7 @@ def DrawCMSLogo(pad,
     """
     pad.cd()
     cmsTextFont = 62  # default is helvetic-bold
-
+    lumiTextOffset = 0.2
     writeExtraText = len(extraText) > 0
     writeExtraText2 = len(extraText2) > 0
     extraTextFont = 52
@@ -445,11 +446,13 @@ def DrawCMSLogo(pad,
     latex.SetTextColor(R.kBlack)
 
     extraTextSize = extraOverCmsTextSize * cmsTextSize
-    pad_ratio = (float(pad.GetWh()) * pad.GetAbsHNDC()) / (
+    pad_ratio_raw = (float(pad.GetWh()) * pad.GetAbsHNDC()) / (
         float(pad.GetWw()) * pad.GetAbsWNDC()
     )
-    if pad_ratio < 1.0:
+    if pad_ratio_raw < 1.0:
         pad_ratio = 1.0
+    else:
+        pad_ratio = pad_ratio_raw
 
     if outOfFrame:
         latex.SetTextFont(cmsTextFont)
@@ -467,10 +470,23 @@ def DrawCMSLogo(pad,
 
     posY_ = 1 - t - relPosY * (1 - t - b)
     if not outOfFrame:
-        latex.SetTextFont(cmsTextFont)
-        latex.SetTextSize(cmsTextSize * t * pad_ratio)
-        latex.SetTextAlign(align_)
-        latex.DrawLatex(posX_, posY_, cmsText)
+        if thesisstyle:
+            latex.SetTextFont(cmsTextFont)
+            latex.SetTextSize(cmsTextSize * t * pad_ratio)
+            latex.SetTextAlign(align_)
+            latex.DrawLatex(posX_, posY_, cmsText)
+            latex.SetTextFont(42)
+            latex.SetTextAlign(align_)
+            latex.SetTextSize(extraTextSize * t * pad_ratio)
+            if pad_ratio_raw > 0.8:
+                latex.DrawLatex(l + (relPosX + 0.081) * (1 - l - r), posY_ - 0.007 , "data")
+            if pad_ratio_raw < 0.8:
+                latex.DrawLatex(l + (relPosX + 0.065) * (1 - l - r), posY_ - 0.007 , "data")
+        else:
+            latex.SetTextFont(cmsTextFont)
+            latex.SetTextSize(cmsTextSize * t * pad_ratio)
+            latex.SetTextAlign(align_)
+            latex.DrawLatex(posX_, posY_, cmsText)
         if writeExtraText:
             latex.SetTextFont(extraTextFont)
             latex.SetTextAlign(align_)
