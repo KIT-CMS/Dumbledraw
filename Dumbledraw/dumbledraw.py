@@ -324,6 +324,7 @@ class Subplot(object):
         self._unroll_label_angle = 270
         self._unroll_label_scalesize = 1.0
         self._scale_ticklength = 1.0
+        self._remove_y_tick_labels = None
 
     @property
     def hists(self):
@@ -638,6 +639,9 @@ class Subplot(object):
         if self._changeylabels != None:
             for i, label in enumerate(self._changeylabels):
                 hist.GetYaxis().ChangeLabel(i+1, -1, -1, -1, -1, -1, label)
+        if self._remove_y_tick_labels is not None:
+            for lab_num in self._remove_y_tick_labels:
+                hist.GetYaxis().ChangeLabel(lab_num, -1, -1, -1, -1, -1, " ")
    
         # add grid ticks if set
         if self._grid:
@@ -798,6 +802,12 @@ class Subplot(object):
             logger.fatal("changeYLabels requires list as input!")
             raise Exception
         self._changeYlabels = replacement_list
+
+    def removeYTickLabels(self, labellist):
+        """Remove tick labels on y axis for specified label numbers"""
+        if not isinstance(labellist, list):
+            labellist = []
+        self._remove_y_tick_labels = labellist
 
 
 class Line(object):
