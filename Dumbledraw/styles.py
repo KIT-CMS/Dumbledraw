@@ -469,6 +469,116 @@ def DrawCMSLogo(pad,
         latex.DrawLatex(posX_, posY_, extraText)
 
 
+def DrawCMSPrivate(pad,
+                   extraText,
+                   iPosX,
+                   relPosX,
+                   relPosY,
+                   relExtraDY,
+                   cmsTextSize=0.8):
+    """Blah
+
+    Args:
+        pad (TYPE): Description
+        extraText (TYPE): Description
+        iPosX (TYPE): Description
+        relPosX (TYPE): Description
+        relPosY (TYPE): Description
+        relExtraDY (TYPE): Description
+        extraText2 (str): Description
+        cmsTextSize (float): Description
+
+    Returns:
+        TYPE: Description
+    """
+    pad.cd()
+    cmsTextFont = 62  # default is helvetic-bold
+
+    writeExtraText = len(extraText) > 0
+    extraTextFont = 52
+    sublabelTextFont = 42
+
+    # text sizes and text offsets with respect to the top frame
+    # in unit of the top margin size
+    lumiTextOffset = 0.2
+    # cmsTextSize = 0.8
+    # float cmsTextOffset    = 0.1;  // only used in outOfFrame version
+
+    # ratio of 'CMS' and extra text size
+    extraOverCmsTextSize = 0.76
+    outOfFrame = False
+    if iPosX / 10 == 0:
+        outOfFrame = True
+
+    alignY_ = 3
+    alignX_ = 2
+    if (iPosX / 10 == 0):
+        alignX_ = 1
+    if (iPosX == 0):
+        alignX_ = 1
+    if (iPosX == 0):
+        alignY_ = 1
+    if (iPosX / 10 == 1):
+        alignX_ = 1
+    if (iPosX / 10 == 2):
+        alignX_ = 2
+    if (iPosX / 10 == 3):
+        alignX_ = 3
+    # if (iPosX == 0): relPosX = 0.14
+    align_ = 10 * alignX_ + alignY_
+
+    l = pad.GetLeftMargin()
+    t = pad.GetTopMargin()
+    r = pad.GetRightMargin()
+    b = pad.GetBottomMargin()
+
+    latex = R.TLatex()
+    latex.SetNDC()
+    latex.SetTextAngle(0)
+    latex.SetTextColor(R.kBlack)
+
+    extraTextSize = extraOverCmsTextSize * cmsTextSize
+    pad_ratio = (float(pad.GetWh()) * pad.GetAbsHNDC()) / \
+        (float(pad.GetWw()) * pad.GetAbsWNDC())
+    if (pad_ratio < 1.):
+        pad_ratio = 1.
+
+    if outOfFrame:
+        latex.SetTextFont(cmsTextFont)
+        latex.SetTextAlign(11)
+        latex.SetTextSize(cmsTextSize * t * pad_ratio)
+        latex.DrawLatex(l, 1 - t + lumiTextOffset * t, cmsText)
+
+    posX_ = 0
+    if iPosX % 10 <= 1:
+        posX_ = l + relPosX * (1 - l - r)
+    elif (iPosX % 10 == 2):
+        posX_ = l + 0.5 * (1 - l - r)
+    elif (iPosX % 10 == 3):
+        posX_ = 1 - r - relPosX * (1 - l - r)
+
+    posY_ = 1 - t - relPosY * (1 - t - b)
+    if not outOfFrame:
+        latex.SetTextFont(extraTextFont)
+        latex.SetTextSize(cmsTextSize * t * pad_ratio)
+        latex.SetTextAlign(align_)
+        latex.DrawLatex(posX_, posY_, "Private work")
+        if writeExtraText:
+            latex.SetTextFont(sublabelTextFont)
+            latex.SetTextAlign(align_)
+            latex.SetTextSize(extraTextSize * t * pad_ratio)
+            latex.DrawLatex(posX_, posY_ - relExtraDY * cmsTextSize * t,
+                            extraText)
+    elif writeExtraText:
+        if iPosX == 0:
+            posX_ = l + relPosX * (1 - l - r)
+            posY_ = 1 - t + lumiTextOffset * t
+        latex.SetTextFont(extraTextFont)
+        latex.SetTextSize(extraTextSize * t * pad_ratio)
+        latex.SetTextAlign(align_)
+        latex.DrawLatex(posX_, posY_, extraText)
+
+
 def DrawTitle(pad, text, align, textSize=0.6):
     pad_backup = R.gPad
     pad.cd()

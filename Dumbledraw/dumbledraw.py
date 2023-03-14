@@ -129,6 +129,20 @@ class Plot(object):
             styles.DrawCMSLogo(self._subplots[0]._pad, 'CMS', cms_sub, 11,
                                0.795, 0.05, 1.0, '', cms_scale)
 
+    def DrawCMSPrivate(self,position=0, cms_sub="(CMS data/simulation)"):
+        # Make CMS logo bigger if no extra text is used
+        cms_scale = 1.0 if cms_sub == "" else 0.6
+        cms_scale = 0.7
+        if position==0:
+            styles.DrawCMSPrivate(self._subplots[0]._pad, cms_sub, 11,
+                               0.040, 0.05, 1.0, cms_scale)
+        elif position=="outside":
+            styles.DrawCMSPrivate(self._subplots[0]._pad, 'CMS', cms_sub, 0,
+                               0.095, 0.05, 1.0, 0.6)
+        else:
+            styles.DrawCMSPrivate(self._subplots[0]._pad, 'CMS', cms_sub, 11,
+                               0.795, 0.05, 1.0, cms_scale)
+
     def DrawLumi(self, lumi, textsize=0.6):
         styles.DrawTitle(self._subplots[0]._pad, lumi, 3, textsize)
 
