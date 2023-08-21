@@ -54,7 +54,6 @@ class Rootfile_parser(object):
     }
 
     def __init__(self, inputrootfilename, variable):
-        print(inputrootfilename)
         self._rootfilename = inputrootfilename
         self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._variable = variable
@@ -81,8 +80,6 @@ class Rootfile_parser(object):
             variable=self._variable,
         )
         logger.debug("Try to access %s in %s" % (hist_hash, self._rootfilename))
-        print("rootfile: ", self._rootfile.Get(hist_hash), " hash: ", hist_hash)
-
         return self._rootfile.Get(hist_hash)
 
     def list_contents(self):
