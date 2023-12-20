@@ -19,8 +19,9 @@ def CreateTransparentColor(color, alpha):
     return new_idx
 
 
-legend_label_dict = yaml.load(open(labels_path))["legend_label"]
-x_label_dict = yaml.load(open(labels_path))["x_label"]
+legend_label_dict = yaml.safe_load(open(labels_path))["legend_label"]
+x_label_dict = yaml.safe_load(open(labels_path))["x_label"]
+
 
 color_dict = {
     "rem_VV": R.TColor.GetColor("#6F2D35"),
@@ -50,6 +51,58 @@ color_dict = {
     "inclusive": R.TColor.GetColor(254, 74, 73),
     "ZTT": R.TColor.GetColor(248, 206, 104),
     "EMB": R.TColor.GetColor(248, 206, 104),
+    "embminus2p5": R.TColor.GetColor(248, 206, 104),
+    "embminus2p4": R.TColor.GetColor(248, 206, 104),
+    "embminus2p3": R.TColor.GetColor(248, 206, 104),
+    "embminus2p2": R.TColor.GetColor(248, 206, 104),
+    "embminus2p1": R.TColor.GetColor(248, 206, 104),
+    "embminus2p0": R.TColor.GetColor(248, 206, 104),
+    "embminus1p9": R.TColor.GetColor(248, 206, 104),
+    "embminus1p8": R.TColor.GetColor(248, 206, 104),
+    "embminus1p7": R.TColor.GetColor(248, 206, 104),
+    "embminus1p6": R.TColor.GetColor(248, 206, 104),
+    "embminus1p5": R.TColor.GetColor(248, 206, 104),
+    "embminus1p4": R.TColor.GetColor(248, 206, 104),
+    "embminus1p3": R.TColor.GetColor(248, 206, 104),
+    "embminus1p2": R.TColor.GetColor(248, 206, 104),
+    "embminus1p1": R.TColor.GetColor(248, 206, 104),
+    "embminus1p0": R.TColor.GetColor(248, 206, 104),
+    "embminus0p9": R.TColor.GetColor(248, 206, 104),
+    "embminus0p8": R.TColor.GetColor(248, 206, 104),
+    "embminus0p7": R.TColor.GetColor(248, 206, 104),
+    "embminus0p6": R.TColor.GetColor(248, 206, 104),
+    "embminus0p5": R.TColor.GetColor(248, 206, 104),
+    "embminus0p4": R.TColor.GetColor(248, 206, 104),
+    "embminus0p3": R.TColor.GetColor(248, 206, 104),
+    "embminus0p2": R.TColor.GetColor(248, 206, 104),
+    "embminus0p1": R.TColor.GetColor(248, 206, 104),
+    "emb0p0": R.TColor.GetColor(248, 206, 104),
+    "emb0p1": R.TColor.GetColor(248, 206, 104),
+    "emb0p2": R.TColor.GetColor(248, 206, 104),
+    "emb0p3": R.TColor.GetColor(248, 206, 104),
+    "emb0p4": R.TColor.GetColor(248, 206, 104),
+    "emb0p5": R.TColor.GetColor(248, 206, 104),
+    "emb0p6": R.TColor.GetColor(248, 206, 104),
+    "emb0p7": R.TColor.GetColor(248, 206, 104),
+    "emb0p8": R.TColor.GetColor(248, 206, 104),
+    "emb0p9": R.TColor.GetColor(248, 206, 104),
+    "emb1p0": R.TColor.GetColor(248, 206, 104),
+    "emb1p1": R.TColor.GetColor(248, 206, 104),
+    "emb1p2": R.TColor.GetColor(248, 206, 104),
+    "emb1p3": R.TColor.GetColor(248, 206, 104),
+    "emb1p4": R.TColor.GetColor(248, 206, 104),
+    "emb1p5": R.TColor.GetColor(248, 206, 104),
+    "emb1p6": R.TColor.GetColor(248, 206, 104),
+    "emb1p7": R.TColor.GetColor(248, 206, 104),
+    "emb1p8": R.TColor.GetColor(248, 206, 104),
+    "emb1p9": R.TColor.GetColor(248, 206, 104),
+    "emb2p0": R.TColor.GetColor(248, 206, 104),
+    "emb2p1": R.TColor.GetColor(248, 206, 104),
+    "emb2p2": R.TColor.GetColor(248, 206, 104),
+    "emb2p3": R.TColor.GetColor(248, 206, 104),
+    "emb2p4": R.TColor.GetColor(248, 206, 104),
+    "emb2p5": R.TColor.GetColor(248, 206, 104),
+    "MUEMB": R.TColor.GetColor(100, 192, 232),
     "ZLL": R.TColor.GetColor(100, 192, 232),
     "ZL": R.TColor.GetColor(100, 192, 232),
     "ZJ": R.TColor.GetColor("#64DE6A"),
@@ -89,7 +142,7 @@ color_dict = {
 
 def SetStyle(name, **kwargs):
     styles = {"none": none, "TDR": SetTDRStyle, "ModTDR": ModTDRStyle}
-    if not name in styles.keys():
+    if not name in list(styles.keys()):
         logger.fatal("%s style not available!" % name)
     logger.info("Set plotting style to %s" % name)
     styles[name](**kwargs)

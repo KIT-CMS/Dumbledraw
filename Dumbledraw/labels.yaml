@@ -1,409 +1,501 @@
 x_label:
   mm:
     # Dilepton Quantities
-    m_vis: 'Di-#mu mass / GeV'
-    ptvis: 'Di-#mu p_{T} / GeV'
-    DiTauDeltaR: '#DeltaR(#mu_{1}, #mu_{2})'
-    m_sv: 'SVFit di-#tau mass (PF) / GeV'
-    pt_sv: 'SVFit di-#tau p_{T} (PF) / GeV'
-    eta_sv: 'SVFit di-#tau #eta (PF)'
-    m_fastmtt: 'fastMTT di-#tau mass (PF) / GeV'
-    pt_fastmtt: 'fastMTT di-#tau p_{T} (PF) / GeV'
-    eta_fastmtt: 'fastMTT di-#tau #eta (PF)'
-    m_sv_puppi: 'SVFit di-#tau mass (Puppi) / GeV'
-    pt_sv_puppi: 'SVFit di-#tau p_{T} (Puppi) / GeV'
-    eta_sv_puppi: 'SVFit di-#tau #eta (Puppi)'
-    m_fastmtt_puppi: 'fastMTT di-#tau mass (Puppi) / GeV'
-    pt_fastmtt_puppi: 'fastMTT di-#tau p_{T} (Puppi) / GeV'
-    eta_fastmtt_puppi: 'fastMTT di-#tau #eta (Puppi)'
-    pt_tt: 'p_{T}(#tau#tau) (PF) / GeV'
-    pt_tt_puppi: 'p_{T}(#tau#tau) (Puppi) / GeV'
+    m_vis: "Di-#mu mass / GeV"
+    ptvis: "Di-#mu p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(#mu_{1}, #mu_{2})"
+    m_sv: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
+
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
+
+    m_sv_pf: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv_pf: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv_pf: "SVFit di-#tau #eta (PF)"
+    m_fastmtt_pf: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt_pf: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
+    pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
 
     # Lepton quantities
-    pt_1: 'Leading Muon p_{T} / GeV'
-    pt_2: 'Trailing Muon p_{T} / GeV'
-    eta_1: 'Leading Muon #eta'
-    eta_2: 'Trailing Muon #eta'
+    pt_1: "Leading Muon p_{T} / GeV"
+    pt_2: "Trailing Muon p_{T} / GeV"
+    eta_1: "Leading Muon #eta"
+    eta_2: "Trailing Muon #eta"
 
     # Jet quantities
-    jpt_1: 'Leading Jet p_{T} / GeV'
-    jpt_2: 'Trailing Jet p_{T} / GeV'
-    jeta_1: 'Leading Jet #eta'
-    jeta_2: 'Trailing Jet #eta'
-    jdeta: '#Delta #eta_{jj}'
-    jphi_1: 'Leading Jet #varphi'
-    jphi_2: 'Trailing Jet #varphi'
-    mjj: 'Di-Jet mass m_{jj} / GeV'
-    dijetpt: 'Di-Jet p_{T} / GeV'
-    pt_ttjj: 'p_{T}(#tau#tau + di-Jet) (PF) / GeV'
-    pt_ttjj_puppi: 'p_{T}(#tau#tau + di-Jet) (Puppi) / GeV'
-    njets: 'Number of Jets'
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    pt_ttjj_pf: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    njets: "Number of Jets"
 
     # B-jet quantities
-    nbtag: 'Number of b-tagged Jets'
-    bpt_1: 'Leading b-Jet p_{T} / GeV'
-    bpt_2: 'Trailing b-Jet p_{T} / GeV'
-    beta_1: 'Leading b-Jet #eta'
-    beta_2: 'Trailing b-Jet #eta'
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 
     # MET quantities
-    met: 'Missing transverse Energy (PF) / GeV'
-    metphi: 'Missing transverse Energy (PF) #varphi'
-    puppimet: 'Missing transverse Energy (Puppi) / GeV'
-    puppimetphi: 'Missing transverse Energy (Puppi) #varphi'
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
 
     # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(#mu_{1}, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (PF) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(#mu_{1}+#mu_{2}, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(#mu_{1}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(#mu_{1}+#mu_{2}, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
+    mt_1: "Transverse mass m_{T}(#mu_{1}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(#mu_{1}+#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(#mu_{1}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(#mu_{1}+#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_pf: "Transverse mass m_{T}(#mu_{1}, #slash{E}_{T}) (PF) / GeV"
+    mt_2_pf: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot_pf: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET_pf: "Transverse mass m_{T}(#mu_{1}+#mu_{2}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis_pf: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
 
     # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
   em:
     # Dilepton Quantities
-    m_vis: 'Visible di-#tau mass / GeV'
-    ptvis: 'Visible di-#tau p_{T} / GeV'
-    DiTauDeltaR: '#DeltaR(e, #mu)'
-    m_sv: 'SVFit di-#tau mass (PF) / GeV'
-    pt_sv: 'SVFit di-#tau p_{T} (PF) / GeV'
-    eta_sv: 'SVFit di-#tau #eta (PF)'
-    m_fastmtt: 'fastMTT di-#tau mass (PF) / GeV'
-    pt_fastmtt: 'fastMTT di-#tau p_{T} (PF) / GeV'
-    eta_fastmtt: 'fastMTT di-#tau #eta (PF)'
-    m_sv_puppi: 'SVFit di-#tau mass (Puppi) / GeV'
-    pt_sv_puppi: 'SVFit di-#tau p_{T} (Puppi) / GeV'
-    eta_sv_puppi: 'SVFit di-#tau #eta (Puppi)'
-    m_fastmtt_puppi: 'fastMTT di-#tau mass (Puppi) / GeV'
-    pt_fastmtt_puppi: 'fastMTT di-#tau p_{T} (Puppi) / GeV'
-    eta_fastmtt_puppi: 'fastMTT di-#tau #eta (Puppi)'
-    pt_tt: 'p_{T}(#tau#tau) (PF) / GeV'
-    pt_tt_puppi: 'p_{T}(#tau#tau) (Puppi) / GeV'
+    m_vis: "Visible di-#tau mass / GeV"
+    ptvis: "Visible di-#tau p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(e, #mu)"
+    m_sv: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv: "SVFit di-#tau #eta (PF)"
+    m_fastmtt: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (PF)"
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (PF) / GeV"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
 
     # Lepton quantities
-    pt_1: 'Electron p_{T} / GeV'
-    pt_2: 'Muon p_{T} / GeV'
-    eta_1: 'Electron #eta'
-    eta_2: 'Muon #eta'
+    pt_1: "Electron p_{T} / GeV"
+    pt_2: "Muon p_{T} / GeV"
+    eta_1: "Electron #eta"
+    eta_2: "Muon #eta"
 
     # Jet quantities
-    jpt_1: 'Leading Jet p_{T} / GeV'
-    jpt_2: 'Trailing Jet p_{T} / GeV'
-    jeta_1: 'Leading Jet #eta'
-    jeta_2: 'Trailing Jet #eta'
-    jdeta: '#Delta #eta_{jj}'
-    jphi_1: 'Leading Jet #varphi'
-    jphi_2: 'Trailing Jet #varphi'
-    mjj: 'Di-Jet mass m_{jj} / GeV'
-    dijetpt: 'Di-Jet p_{T} / GeV'
-    pt_ttjj: 'p_{T}(#tau#tau + di-Jet) (PF) / GeV'
-    pt_ttjj_puppi: 'p_{T}(#tau#tau + di-Jet) (Puppi) / GeV'
-    njets: 'Number of Jets'
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    njets: "Number of Jets"
 
     # B-jet quantities
-    nbtag: 'Number of b-tagged Jets'
-    bpt_1: 'Leading b-Jet p_{T} / GeV'
-    bpt_2: 'Trailing b-Jet p_{T} / GeV'
-    beta_1: 'Leading b-Jet #eta'
-    beta_2: 'Trailing b-Jet #eta'
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 
     # MET quantities
-    met: 'Missing transverse Energy (PF) / GeV'
-    metphi: 'Missing transverse Energy (PF) #varphi'
-    puppimet: 'Missing transverse Energy (Puppi) / GeV'
-    puppimetphi: 'Missing transverse Energy (Puppi) #varphi'
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
 
     # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(e, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (PF) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(e+#mu, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(e, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(e+#mu, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
+    mt_1: "Transverse mass m_{T}(e, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(e+#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(e, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(e+#mu_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_pf: "Transverse mass m_{T}(e_{1}, #slash{E}_{T}) (PF) / GeV"
+    mt_2_pf: "Transverse mass m_{T}(#mu_{2}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot_pf: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET_pf: "Transverse mass m_{T}(e+#mu_{2}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis_pf: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
 
     # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
   mt:
     # Dilepton Quantities
-    m_vis: 'Visible di-#tau mass / GeV'
-    ptvis: 'Visible di-#tau p_{T} / GeV'
-    DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
-    m_sv: 'SVFit di-#tau mass (PF) / GeV'
-    pt_sv: 'SVFit di-#tau p_{T} (PF) / GeV'
-    eta_sv: 'SVFit di-#tau #eta (PF)'
-    m_fastmtt: 'fastMTT di-#tau mass (PF) / GeV'
-    pt_fastmtt: 'fastMTT di-#tau p_{T} (PF) / GeV'
-    eta_fastmtt: 'fastMTT di-#tau #eta (PF)'
-    m_sv_puppi: 'SVFit di-#tau mass (Puppi) / GeV'
-    pt_sv_puppi: 'SVFit di-#tau p_{T} (Puppi) / GeV'
-    eta_sv_puppi: 'SVFit di-#tau #eta (Puppi)'
-    m_fastmtt_puppi: 'fastMTT di-#tau mass (Puppi) / GeV'
-    pt_fastmtt_puppi: 'fastMTT di-#tau p_{T} (Puppi) / GeV'
-    eta_fastmtt_puppi: 'fastMTT di-#tau #eta (Puppi)'
-    pt_tt: 'p_{T}(#tau#tau) (PF) / GeV'
-    pt_tt_puppi: 'p_{T}(#tau#tau) (Puppi) / GeV'
+    m_vis: "Visible di-#tau mass / GeV"
+    ptvis: "Visible di-#tau p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(#mu, ^{}#tau_{h})"
+    m_sv: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv: "SVFit di-#tau #eta (PF)"
+    m_fastmtt: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (PF)"
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (PF) / GeV"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
 
     # Lepton quantities
-    pt_1: 'Muon p_{T} / GeV'
-    pt_2: 'Hadronic Tau p_{T} / GeV'
-    eta_1: 'Muon #eta'
-    eta_2: 'Hadronic Tau #eta'
+    pt_1: "Muon p_{T} / GeV"
+    pt_2: "Hadronic Tau p_{T} / GeV"
+    eta_1: "Muon #eta"
+    eta_2: "Hadronic Tau #eta"
 
     # Jet quantities
-    jpt_1: 'Leading Jet p_{T} / GeV'
-    jpt_2: 'Trailing Jet p_{T} / GeV'
-    jeta_1: 'Leading Jet #eta'
-    jeta_2: 'Trailing Jet #eta'
-    jdeta: '#Delta #eta_{jj}'
-    jphi_1: 'Leading Jet #varphi'
-    jphi_2: 'Trailing Jet #varphi'
-    mjj: 'Di-Jet mass m_{jj} / GeV'
-    dijetpt: 'Di-Jet p_{T} / GeV'
-    pt_ttjj: 'p_{T}(#tau#tau + di-Jet) (PF) / GeV'
-    pt_ttjj_puppi: 'p_{T}(#tau#tau + di-Jet) (Puppi) / GeV'
-    njets: 'Number of Jets'
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    pt_ttjj_pf: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    njets: "Number of Jets"
 
     # B-jet quantities
-    nbtag: 'Number of b-tagged Jets'
-    bpt_1: 'Leading b-Jet p_{T} / GeV'
-    bpt_2: 'Trailing b-Jet p_{T} / GeV'
-    beta_1: 'Leading b-Jet #eta'
-    beta_2: 'Trailing b-Jet #eta'
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 
     # MET quantities
-    met: 'Missing transverse Energy (PF) / GeV'
-    metphi: 'Missing transverse Energy (PF) #varphi'
-    puppimet: 'Missing transverse Energy (Puppi) / GeV'
-    puppimetphi: 'Missing transverse Energy (Puppi) #varphi'
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
 
     # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(#mu+^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(#mu+^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
+    mt_1: "Transverse mass m_{T}(#mu, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2: "Transverse mass m_{T}(#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(#mu+#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(#mu, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(#mu+#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_pf: "Transverse mass m_{T}(#mu, #slash{E}_{T}) (PF) / GeV"
+    mt_2_pf: "Transverse mass m_{T}(#tau_{h}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot_pf: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET_pf: "Transverse mass m_{T}(#mu+#tau_{h}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis_pf: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
 
     # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
   et:
     # Dilepton Quantities
-    m_vis: 'Visible di-#tau mass / GeV'
-    ptvis: 'Visible di-#tau p_{T} / GeV'
-    DiTauDeltaR: '#DeltaR(e, ^{}#tau_{h})'
-    m_sv: 'SVFit di-#tau mass (PF) / GeV'
-    pt_sv: 'SVFit di-#tau p_{T} (PF) / GeV'
-    eta_sv: 'SVFit di-#tau #eta (PF)'
-    m_fastmtt: 'fastMTT di-#tau mass (PF) / GeV'
-    pt_fastmtt: 'fastMTT di-#tau p_{T} (PF) / GeV'
-    eta_fastmtt: 'fastMTT di-#tau #eta (PF)'
-    m_sv_puppi: 'SVFit di-#tau mass (Puppi) / GeV'
-    pt_sv_puppi: 'SVFit di-#tau p_{T} (Puppi) / GeV'
-    eta_sv_puppi: 'SVFit di-#tau #eta (Puppi)'
-    m_fastmtt_puppi: 'fastMTT di-#tau mass (Puppi) / GeV'
-    pt_fastmtt_puppi: 'fastMTT di-#tau p_{T} (Puppi) / GeV'
-    eta_fastmtt_puppi: 'fastMTT di-#tau #eta (Puppi)'
-    pt_tt: 'p_{T}(#tau#tau) (PF) / GeV'
-    pt_tt_puppi: 'p_{T}(#tau#tau) (Puppi) / GeV'
+    m_vis: "Visible di-#tau mass / GeV"
+    ptvis: "Visible di-#tau p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(e, ^{}#tau_{h})"
+    m_sv: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv: "SVFit di-#tau #eta (PF)"
+    m_fastmtt: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (PF)"
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (PF) / GeV"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
 
     # Lepton quantities
-    pt_1: 'Electron p_{T} / GeV'
-    pt_2: 'Hadronic Tau p_{T} / GeV'
-    eta_1: 'Electron #eta'
-    eta_2: 'Hadronic Tau #eta'
+    pt_1: "Electron p_{T} / GeV"
+    pt_2: "Hadronic Tau p_{T} / GeV"
+    eta_1: "Electron #eta"
+    eta_2: "Hadronic Tau #eta"
 
     # Jet quantities
-    jpt_1: 'Leading Jet p_{T} / GeV'
-    jpt_2: 'Trailing Jet p_{T} / GeV'
-    jeta_1: 'Leading Jet #eta'
-    jeta_2: 'Trailing Jet #eta'
-    jdeta: '#Delta #eta_{jj}'
-    jphi_1: 'Leading Jet #varphi'
-    jphi_2: 'Trailing Jet #varphi'
-    mjj: 'Di-Jet mass m_{jj} / GeV'
-    dijetpt: 'Di-Jet p_{T} / GeV'
-    pt_ttjj: 'p_{T}(#tau#tau + di-Jet) (PF) / GeV'
-    pt_ttjj_puppi: 'p_{T}(#tau#tau + di-Jet) (Puppi) / GeV'
-    njets: 'Number of Jets'
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    njets: "Number of Jets"
 
     # B-jet quantities
-    nbtag: 'Number of b-tagged Jets'
-    bpt_1: 'Leading b-Jet p_{T} / GeV'
-    bpt_2: 'Trailing b-Jet p_{T} / GeV'
-    beta_1: 'Leading b-Jet #eta'
-    beta_2: 'Trailing b-Jet #eta'
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 
     # MET quantities
-    met: 'Missing transverse Energy (PF) / GeV'
-    metphi: 'Missing transverse Energy (PF) #varphi'
-    puppimet: 'Missing transverse Energy (Puppi) / GeV'
-    puppimetphi: 'Missing transverse Energy (Puppi) #varphi'
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
 
     # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(e, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(e+^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(e, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(e+^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
+    mt_1: "Transverse mass m_{T}(e, #slash{E}_{T}) (PF) / GeV"
+    mt_2: "Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(e+^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(e, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(e+^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
 
     # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
   tt:
     # Dilepton Quantities
-    m_vis: 'Visible di-#tau mass / GeV'
-    ptvis: 'Visible di-#tau p_{T} / GeV'
-    DiTauDeltaR: '#DeltaR(^{}#tau_{h,1}, ^{}#tau_{h,2})'
-    m_sv: 'SVFit di-#tau mass (PF) / GeV'
-    pt_sv: 'SVFit di-#tau p_{T} (PF) / GeV'
-    eta_sv: 'SVFit di-#tau #eta (PF)'
-    m_fastmtt: 'fastMTT di-#tau mass (PF) / GeV'
-    pt_fastmtt: 'fastMTT di-#tau p_{T} (PF) / GeV'
-    eta_fastmtt: 'fastMTT di-#tau #eta (PF)'
-    m_sv_puppi: 'SVFit di-#tau mass (Puppi) / GeV'
-    pt_sv_puppi: 'SVFit di-#tau p_{T} (Puppi) / GeV'
-    eta_sv_puppi: 'SVFit di-#tau #eta (Puppi)'
-    m_fastmtt_puppi: 'fastMTT di-#tau mass (Puppi) / GeV'
-    pt_fastmtt_puppi: 'fastMTT di-#tau p_{T} (Puppi) / GeV'
-    eta_fastmtt_puppi: 'fastMTT di-#tau #eta (Puppi)'
-    pt_tt: 'p_{T}(#tau#tau) (PF) / GeV'
-    pt_tt_puppi: 'p_{T}(#tau#tau) (Puppi) / GeV'
+    m_vis: "Visible di-#tau mass / GeV"
+    ptvis: "Visible di-#tau p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(^{}#tau_{h,1}, ^{}#tau_{h,2})"
+    m_sv: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv: "SVFit di-#tau #eta (PF)"
+    m_fastmtt: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (PF)"
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (PF) / GeV"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
 
     # Lepton quantities
-    pt_1: 'Leading hadronic Tau p_{T} / GeV'
-    pt_2: 'Trailing hadronic Tau p_{T} / GeV'
-    eta_1: 'Leading hadronic Tau #eta'
-    eta_2: 'Trailing hadronic Tau #eta'
+    pt_1: "Leading hadronic Tau p_{T} / GeV"
+    pt_2: "Trailing hadronic Tau p_{T} / GeV"
+    eta_1: "Leading hadronic Tau #eta"
+    eta_2: "Trailing hadronic Tau #eta"
 
     # Jet quantities
-    jpt_1: 'Leading Jet p_{T} / GeV'
-    jpt_2: 'Trailing Jet p_{T} / GeV'
-    jeta_1: 'Leading Jet #eta'
-    jeta_2: 'Trailing Jet #eta'
-    jdeta: '#Delta #eta_{jj}'
-    jphi_1: 'Leading Jet #varphi'
-    jphi_2: 'Trailing Jet #varphi'
-    mjj: 'Di-Jet mass m_{jj} / GeV'
-    dijetpt: 'Di-Jet p_{T} / GeV'
-    pt_ttjj: 'p_{T}(#tau#tau + di-Jet) (PF) / GeV'
-    pt_ttjj_puppi: 'p_{T}(#tau#tau + di-Jet) (Puppi) / GeV'
-    njets: 'Number of Jets'
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    njets: "Number of Jets"
 
     # B-jet quantities
-    nbtag: 'Number of b-tagged Jets'
-    bpt_1: 'Leading b-Jet p_{T} / GeV'
-    bpt_2: 'Trailing b-Jet p_{T} / GeV'
-    beta_1: 'Leading b-Jet #eta'
-    beta_2: 'Trailing b-Jet #eta'
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 
     # MET quantities
-    met: 'Missing transverse Energy (PF) / GeV'
-    metphi: 'Missing transverse Energy (PF) #varphi'
-    puppimet: 'Missing transverse Energy (Puppi) / GeV'
-    puppimetphi: 'Missing transverse Energy (Puppi) #varphi'
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
 
     # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(^{}#tau_{h,1}, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(^{}#tau_{h,2}, #slash{E}_{T}) (PF) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(^{}#tau_{h,1}+^{}#tau_{h,2}, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(^{}#tau_{h,1}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(^{}#tau_{h,2}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(^{}#tau_{h,1}+^{}#tau_{h,2}, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
+    mt_1: "Transverse mass m_{T}(^{}#tau_{h,1}, #slash{E}_{T}) (PF) / GeV"
+    mt_2: "Transverse mass m_{T}(^{}#tau_{h,2}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(^{}#tau_{h,1}+^{}#tau_{h,2}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(^{}#tau_{h,1}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(^{}#tau_{h,2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(^{}#tau_{h,1}+^{}#tau_{h,2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
 
     # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
+  ee:
+    # Dilepton Quantities
+    m_vis: "Di-e mass / GeV"
+    ptvis: "Di-e p_{T} / GeV"
+    DiTauDeltaR: "#DeltaR(e_{1}, e_{2})"
+    m_sv: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
+
+    m_sv_puppi: "SVFit di-#tau mass (Puppi) / GeV"
+    pt_sv_puppi: "SVFit di-#tau p_{T} (Puppi) / GeV"
+    eta_sv_puppi: "SVFit di-#tau #eta (Puppi)"
+    m_fastmtt_puppi: "fastMTT di-#tau mass (Puppi) / GeV"
+    pt_fastmtt_puppi: "fastMTT di-#tau p_{T} (Puppi) / GeV"
+    eta_fastmtt_puppi: "fastMTT di-#tau #eta (Puppi)"
+    pt_tt_puppi: "p_{T}(#tau#tau) (Puppi) / GeV"
+
+    m_sv_pf: "SVFit di-#tau mass (PF) / GeV"
+    pt_sv_pf: "SVFit di-#tau p_{T} (PF) / GeV"
+    eta_sv_pf: "SVFit di-#tau #eta (PF)"
+    m_fastmtt_pf: "fastMTT di-#tau mass (PF) / GeV"
+    pt_fastmtt_pf: "fastMTT di-#tau p_{T} (PF) / GeV"
+    eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
+    pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
+
+    # Lepton quantities
+    pt_1: "Leading Electron p_{T} / GeV"
+    pt_2: "Trailing Electron p_{T} / GeV"
+    eta_1: "Leading Electron #eta"
+    eta_2: "Trailing Electron #eta"
+
+    # Jet quantities
+    jpt_1: "Leading Jet p_{T} / GeV"
+    jpt_2: "Trailing Jet p_{T} / GeV"
+    jeta_1: "Leading Jet #eta"
+    jeta_2: "Trailing Jet #eta"
+    jdeta: "#Delta #eta_{jj}"
+    jphi_1: "Leading Jet #varphi"
+    jphi_2: "Trailing Jet #varphi"
+    mjj: "Di-Jet mass m_{jj} / GeV"
+    dijetpt: "Di-Jet p_{T} / GeV"
+    pt_ttjj: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    pt_ttjj_puppi: "p_{T}(#tau#tau + di-Jet) (Puppi) / GeV"
+    pt_ttjj_pf: "p_{T}(#tau#tau + di-Jet) (PF) / GeV"
+    njets: "Number of Jets"
+
+    # B-jet quantities
+    nbtag: "Number of b-tagged Jets"
+    bpt_1: "Leading b-Jet p_{T} / GeV"
+    bpt_2: "Trailing b-Jet p_{T} / GeV"
+    beta_1: "Leading b-Jet #eta"
+    beta_2: "Trailing b-Jet #eta"
 emt:
     # Dilepton Quantitieshttps://mattermost.web.cern.ch/cms-htt/messages/@rwolf
     m_vis: 'Visible di-#tau mass / GeV'
@@ -1055,6 +1147,48 @@ emt:
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
 
+
+    # MET quantities
+    met: "Missing transverse Energy (Puppi) / GeV"
+    metphi: "Missing transverse Energy (Puppi) #varphi"
+    puppimet: "Missing transverse Energy (Puppi) / GeV"
+    puppimetphi: "Missing transverse Energy (Puppi) #varphi"
+    pfmet: "Missing transverse Energy (PF) / GeV"
+    pfmetphi: "Missing transverse Energy (PF) #varphi"
+
+    # Lepton-MET quantities
+    mt_1: "Transverse mass m_{T}(e_{1}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2: "Transverse mass m_{T}(e_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET: "Transverse mass m_{T}(e_{1}+e_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_puppi: "Transverse mass m_{T}(e_{1}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_2_puppi: "Transverse mass m_{T}(e_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_tot_puppi: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
+    mTdileptonMET_puppi: "Transverse mass m_{T}(e_{1}+e_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    pZetaPuppiMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mt_1_pf: "Transverse mass m_{T}(e_{1}, #slash{E}_{T}) (PF) / GeV"
+    mt_2_pf: "Transverse mass m_{T}(e_{2}, #slash{E}_{T}) (PF) / GeV"
+    mt_tot_pf: "Total transverse mass m_{T}^{tot} (PF) / GeV"
+    mTdileptonMET_pf: "Transverse mass m_{T}(e_{1}+e_{2}, #slash{E}_{T}) (PF) / GeV"
+    pZetaMissVis_pf: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV"
+
+    # MELA quantities
+    ME_D: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_vbf_vs_Z: "MELA D^{VBF}_{Z + 2 Jets}"
+    ME_ggh_vs_Z: "MELA D^{ggH}_{Z + 2 Jets}"
+    ME_vbf_vs_ggh: "MELA D^{VBF}_{ggH}"
+    ME_ggh: "MELA ^{}P(ggH)"
+    ME_vbf: "MELA ^{}P(VBF)"
+    ME_z2j_1: "MELA ^{}P_{1}(Z + 2 Jets)"
+    ME_z2j_2: "MELA ^{}P_{2}(Z + 2 Jets)"
+    ME_q2v1: "MELA Q^{2}(^{}V_{1}) / GeV^{2}"
+    ME_q2v2: "MELA Q^{2}(^{}V_{2}) / GeV^{2}"
+    ME_costheta1: "MELA cos(#Theta_{1})"
+    ME_costheta2: "MELA cos(#Theta_{2})"
+    ME_costhetastar: "MELA cos(#Theta*)"
+    ME_phi: "MELA #Phi"
+    ME_phi1: "MELA #Phi_{1}"
 legend_label:
     VHWW: 'VH#rightarrowWW'
     rem_VH: 'VH#rightarrowWW'
@@ -1079,6 +1213,57 @@ legend_label:
     ZH: 'qq#rightarrowZH'
     ZTT: 'Z#rightarrow#tau#tau'
     EMB: '#tau embedded'
+    embminus2p5: "#tau embedded es -2.5%"
+    embminus2p4: "#tau embedded es -2.4%"
+    embminus2p3: "#tau embedded es -2.3%"
+    embminus2p2: "#tau embedded es -2.2%"
+    embminus2p1: "#tau embedded es -2.1%"
+    embminus2p0: "#tau embedded es -2.0%"
+    embminus1p9: "#tau embedded es -1.9%"
+    embminus1p8: "#tau embedded es -1.8%"
+    embminus1p7: "#tau embedded es -1.7%"
+    embminus1p6: "#tau embedded es -1.6%"
+    embminus1p5: "#tau embedded es -1.5%"
+    embminus1p4: "#tau embedded es -1.4%"
+    embminus1p3: "#tau embedded es -1.3%"
+    embminus1p2: "#tau embedded es -1.2%"
+    embminus1p1: "#tau embedded es -1.1%"
+    embminus1p0: "#tau embedded es -1.0%"
+    embminus0p9: "#tau embedded es -0.9%"
+    embminus0p8: "#tau embedded es -0.8%"
+    embminus0p7: "#tau embedded es -0.7%"
+    embminus0p6: "#tau embedded es -0.6%"
+    embminus0p5: "#tau embedded es -0.5%"
+    embminus0p4: "#tau embedded es -0.4%"
+    embminus0p3: "#tau embedded es -0.3%"
+    embminus0p2: "#tau embedded es -0.2%"
+    embminus0p1: "#tau embedded es -0.1%"
+    emb0p0: "#tau embedded es 0.0%"
+    emb0p1: "#tau embedded es 0.1%"
+    emb0p2: "#tau embedded es 0.2%"
+    emb0p3: "#tau embedded es 0.3%"
+    emb0p4: "#tau embedded es 0.4%"
+    emb0p5: "#tau embedded es 0.5%"
+    emb0p6: "#tau embedded es 0.6%"
+    emb0p7: "#tau embedded es 0.7%"
+    emb0p8: "#tau embedded es 0.8%"
+    emb0p9: "#tau embedded es 0.9%"
+    emb1p0: "#tau embedded es 1.0%"
+    emb1p1: "#tau embedded es 1.1%"
+    emb1p2: "#tau embedded es 1.2%"
+    emb1p3: "#tau embedded es 1.3%"
+    emb1p4: "#tau embedded es 1.4%"
+    emb1p5: "#tau embedded es 1.5%"
+    emb1p6: "#tau embedded es 1.6%"
+    emb1p7: "#tau embedded es 1.7%"
+    emb1p8: "#tau embedded es 1.8%"
+    emb1p9: "#tau embedded es 1.9%"
+    emb2p0: "#tau embedded es 2.0%"
+    emb2p1: "#tau embedded es 2.1%"
+    emb2p2: "#tau embedded es 2.2%"
+    emb2p3: "#tau embedded es 2.3%"
+    emb2p4: "#tau embedded es 2.4%"
+    emb2p5: "#tau embedded es 2.5%"
     EMBCMB: 'Z/t#bar{t}/VV#rightarrow#tau#tau'
     TotalBkg: 'Background' 
     REST: 'Sim. Bkg.'
@@ -1113,3 +1298,4 @@ legend_label:
     jetFakesTT: 'Jet#rightarrow^{}#tau_{h} (TT)'
     jetFakesEMB: 'Jet#rightarrow^{}#tau_{h}'
     data_obs: 'Data'
+
