@@ -19,21 +19,30 @@ def CreateTransparentColor(color, alpha):
     return new_idx
 
 
-legend_label_dict = yaml.safe_load(open(labels_path))["legend_label"]
-x_label_dict = yaml.safe_load(open(labels_path))["x_label"]
+
+legend_label_dict = yaml.load(open(labels_path))["legend_label"]
+x_label_dict = yaml.load(open(labels_path))["x_label"]
 
 color_dict = {
-#    "ggH": R.TColor.GetColor("#fed766"),
-#    "qqH": R.TColor.GetColor("#2ab7ca"),
-#    "VH": R.TColor.GetColor("#001EFF"),
-#    "WH": R.TColor.GetColor("#001EFF"),
-#    "ZH": R.TColor.GetColor("#001EFF"),
-    "ggH": R.TColor.GetColor("#001EFF"),
-    "qqH": R.TColor.GetColor("#fc6203"),
-    "inclusive": R.TColor.GetColor("#d90021"), ##ba001c"),
-    "VH": R.TColor.GetColor("#2ab7ca"),
-    "WH": R.TColor.GetColor("#2ab7ca"),
-    "ZH": R.TColor.GetColor("#2ab7ca"),
+    "rem_VV": R.TColor.GetColor("#6F2D35"),
+    "rem_VH": R.TColor.GetColor("#ffb55a"),
+    "rem_ttbar": R.TColor.GetColor("#ffee65"),
+    # "VVToQ": R.TColor.GetColor("#001EFF"),
+    "WHplus": R.TColor.GetColor("#fd7f6f"),
+    "WHminus": R.TColor.GetColor("#6fedfd"),
+    "ZZ": R.TColor.GetColor("#7eb0d5"),
+    "WZ": R.TColor.GetColor("#b2e061"),
+    "VVV": R.TColor.GetColor("#bd7ebe"),
+    "VHWW": R.TColor.GetColor("#ffb55a"),
+    "TTV": R.TColor.GetColor("#ffee65"),
+    "ggZZ": R.TColor.GetColor("#beb9db"),
+    "Wjets": R.TColor.GetColor("#0d88e6"),
+    "DY": R.TColor.GetColor("#8bd3c7"),
+    "ggH": R.TColor.GetColor("#fed766"),
+    "qqH": R.TColor.GetColor("#2ab7ca"),
+    "VH": R.TColor.GetColor("#001EFF"),
+    "WH": R.TColor.GetColor("#001EFF"),
+    "ZH": R.TColor.GetColor("#001EFF"),
     "ttH": R.TColor.GetColor("#FF00FF"),
 #    "HWW": R.TColor.GetColor("#FF8C00"),
 #    "ggH_hww": R.TColor.GetColor("#FF8C00"),
@@ -78,13 +87,13 @@ color_dict = {
     "EWKJ": R.TColor.GetColor("#E1F5A9"),
     "EWKZ": R.TColor.GetColor("#E1F5A9"),
     "jetFakes": R.TColor.GetColor(192, 232, 100),
+    "jetFakesWH": R.TColor.GetColor("#FCBACB"),
     "jetFakesW": R.TColor.GetColor(222, 90, 106),
     "jetFakesQCD": R.TColor.GetColor(250, 202, 255),
     "jetFakesTT": R.TColor.GetColor(155, 152, 204),
     "jetFakesEMB": R.TColor.GetColor(192, 232, 100),
     "jetFakesCMB": R.TColor.GetColor(250, 202, 255),
-    #"jetFakesCMB": R.TColor.GetColor(192, 232, 100),
-    "TotalBkg": R.TColor.GetColor(211,211,211),
+    "TotalBkg": R.TColor.GetColor(211, 211, 211),
     "REST": R.TColor.GetColor("#B0C4DE"),
     "unc": CreateTransparentColor(12, 0.4),
 }
