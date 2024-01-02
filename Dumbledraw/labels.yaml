@@ -1,6 +1,7 @@
 x_label:
   mm:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Di-#mu mass / GeV"
     pt_vis: "Di-#mu p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(#mu_{1}, #mu_{2})"
@@ -99,6 +100,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   em:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Visible di-#tau mass / GeV"
     pt_vis: "Visible di-#tau p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(e, #mu)"
@@ -187,6 +189,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   mt:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Visible di-#tau mass / GeV"
     pt_vis: "Visible di-#tau p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(#mu, ^{}#tau_{h})"
@@ -276,6 +279,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   et:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Visible di-#tau mass / GeV"
     pt_vis: "Visible di-#tau p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(e, ^{}#tau_{h})"
@@ -360,6 +364,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   tt:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Visible di-#tau mass / GeV"
     pt_vis: "Visible di-#tau p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(^{}#tau_{h,1}, ^{}#tau_{h,2})"
@@ -443,6 +448,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   ee:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: "Di-e mass / GeV"
     pt_vis: "Di-e p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(e_{1}, e_{2})"
@@ -514,6 +520,7 @@ x_label:
     ME_phi1: 'MELA #Phi_{1}'
 emt:
     # Dilepton Quantitieshttps://mattermost.web.cern.ch/cms-htt/messages/@rwolf
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -597,6 +604,7 @@ emt:
     ME_phi1: 'MELA #Phi_{1}'
   met:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -663,6 +671,7 @@ emt:
     pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
   mmt:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -762,6 +771,7 @@ emt:
     ME_phi1: 'MELA #Phi_{1}'  
   mtt:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -861,6 +871,7 @@ emt:
     ME_phi1: 'MELA #Phi_{1}'  
   ett:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -960,6 +971,7 @@ emt:
     ME_phi1: 'MELA #Phi_{1}'  
   eem:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
@@ -1062,6 +1074,7 @@ emt:
     ME_phi1: 'MELA #Phi_{1}'  
   mme:
     # Dilepton Quantities
+    yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
     ptvis: 'Visible di-#tau p_{T} / GeV'
     DiTauDeltaR: '#DeltaR(#mu, ^{}#tau_{h})'
