@@ -19,6 +19,7 @@ def CreateTransparentColor(color, alpha):
     return new_idx
 
 
+
 legend_label_dict = yaml.load(open(labels_path))["legend_label"]
 x_label_dict = yaml.load(open(labels_path))["x_label"]
 
@@ -43,21 +44,30 @@ color_dict = {
     "WH": R.TColor.GetColor("#001EFF"),
     "ZH": R.TColor.GetColor("#001EFF"),
     "ttH": R.TColor.GetColor("#FF00FF"),
-    "HWW": R.TColor.GetColor("#FF8C00"),
-    "ggH_hww": R.TColor.GetColor("#FF8C00"),
-    "qqH_hww": R.TColor.GetColor("#FF8C00"),
+#    "HWW": R.TColor.GetColor("#FF8C00"),
+#    "ggH_hww": R.TColor.GetColor("#FF8C00"),
+#    "qqH_hww": R.TColor.GetColor("#FF8C00"),
+    "HWW": R.TColor.GetColor("#006106"),
+    "ggH_hww": R.TColor.GetColor("#006106"),
+    "qqH_hww": R.TColor.GetColor("#006106"),
     "dummy": R.TColor.GetColor(254, 74, 73),
-    "inclusive": R.TColor.GetColor(254, 74, 73),
+#    "inclusive": R.TColor.GetColor(254, 74, 73),
     "ZTT": R.TColor.GetColor(248, 206, 104),
+    "ZTT_NLO": R.TColor.GetColor(248, 206, 104),
     "EMB": R.TColor.GetColor(248, 206, 104),
+    "MUEMB": R.TColor.GetColor(100, 192, 232),
     "ZLL": R.TColor.GetColor(100, 192, 232),
     "ZL": R.TColor.GetColor(100, 192, 232),
     "ZJ": R.TColor.GetColor("#64DE6A"),
+    "ZLL_NLO": R.TColor.GetColor(100, 192, 232),
+    "ZL_NLO": R.TColor.GetColor(100, 192, 232),
+    "ZJ_NLO": R.TColor.GetColor("#64DE6A"),
     "TT": R.TColor.GetColor(155, 152, 204),
     "TTT": R.TColor.GetColor(155, 152, 204),
     "TTL": R.TColor.GetColor(155, 152, 204),
     "TTJ": R.TColor.GetColor(215, 130, 204),
     "W": R.TColor.GetColor(222, 90, 106),
+    "W_NLO": R.TColor.GetColor(222, 90, 106),
     "WT": R.TColor.GetColor(222, 90, 106),
     "WL": R.TColor.GetColor(222, 150, 80),
     "VV": R.TColor.GetColor("#6F2D35"),
@@ -69,6 +79,8 @@ color_dict = {
     "STL": R.TColor.GetColor("#d0f0c1"),
     "QCD": R.TColor.GetColor(250, 202, 255),
     "QCDEMB": R.TColor.GetColor(250, 202, 255),
+    "QCD_NLO": R.TColor.GetColor(250, 202, 255),
+    "QCDEMB_NLO": R.TColor.GetColor(250, 202, 255),
     "EWK": R.TColor.GetColor("#E1F5A9"),
     "EWKT": R.TColor.GetColor("#E1F5A9"),
     "EWKL": R.TColor.GetColor("#E1F5A9"),
@@ -89,7 +101,7 @@ color_dict = {
 
 def SetStyle(name, **kwargs):
     styles = {"none": none, "TDR": SetTDRStyle, "ModTDR": ModTDRStyle}
-    if not name in styles.keys():
+    if not name in list(styles.keys()):
         logger.fatal("%s style not available!" % name)
     logger.info("Set plotting style to %s" % name)
     styles[name](**kwargs)
@@ -285,6 +297,8 @@ def ModTDRStyle(width=600, height=600, t=0.06, b=0.12, l=0.16, r=0.04):
     # Set number of axis tick divisions
     R.gStyle.SetNdivisions(506, "XYZ")  # default 510
 
+    R.TGaxis.SetMaxDigits(4)
+
     # Some marker properties not set in the default tdr style
     R.gStyle.SetMarkerColor(R.kBlack)
     R.gStyle.SetMarkerSize(1.0)
@@ -376,18 +390,18 @@ def DrawText(pad, text, scale_text_size, pos, angle, custom_pos=None):
     latex.SetTextSize(0.04 * scale_text_size)
     latex.DrawLatex(x_pos, y_pos, text)
 
-
-def DrawCMSLogo(
-    pad,
-    cmsText,
-    extraText,
-    iPosX,
-    relPosX,
-    relPosY,
-    relExtraDY,
-    extraText2="",
-    cmsTextSize=0.8,
-):
+def DrawCMSLogo(pad,
+                cmsText,
+                extraText,
+                iPosX,
+                relPosX,
+                relPosY,
+                relExtraDY,
+                extraText2='',
+                extraOverCmsTextSize=0.76,
+                extraTextFont=52,
+                cmsTextSize=0.8,
+                thesisstyle=False):
     """Blah
 
     Args:
@@ -406,19 +420,16 @@ def DrawCMSLogo(
     """
     pad.cd()
     cmsTextFont = 62  # default is helvetic-bold
-
+    lumiTextOffset = 0.2
     writeExtraText = len(extraText) > 0
     writeExtraText2 = len(extraText2) > 0
     extraTextFont = 52
-
     # text sizes and text offsets with respect to the top frame
     # in unit of the top margin size
-    lumiTextOffset = 0.2
     # cmsTextSize = 0.8
     # float cmsTextOffset    = 0.1;  // only used in outOfFrame version
 
     # ratio of 'CMS' and extra text size
-    extraOverCmsTextSize = 0.76
     outOfFrame = False
     if iPosX / 10 == 0:
         outOfFrame = True
@@ -451,11 +462,13 @@ def DrawCMSLogo(
     latex.SetTextColor(R.kBlack)
 
     extraTextSize = extraOverCmsTextSize * cmsTextSize
-    pad_ratio = (float(pad.GetWh()) * pad.GetAbsHNDC()) / (
+    pad_ratio_raw = (float(pad.GetWh()) * pad.GetAbsHNDC()) / (
         float(pad.GetWw()) * pad.GetAbsWNDC()
     )
-    if pad_ratio < 1.0:
+    if pad_ratio_raw < 1.0:
         pad_ratio = 1.0
+    else:
+        pad_ratio = pad_ratio_raw
 
     if outOfFrame:
         latex.SetTextFont(cmsTextFont)
@@ -473,10 +486,23 @@ def DrawCMSLogo(
 
     posY_ = 1 - t - relPosY * (1 - t - b)
     if not outOfFrame:
-        latex.SetTextFont(cmsTextFont)
-        latex.SetTextSize(cmsTextSize * t * pad_ratio)
-        latex.SetTextAlign(align_)
-        latex.DrawLatex(posX_, posY_, cmsText)
+        if thesisstyle:
+            latex.SetTextFont(cmsTextFont)
+            latex.SetTextSize(cmsTextSize * t * pad_ratio)
+            latex.SetTextAlign(align_)
+            latex.DrawLatex(posX_, posY_, cmsText)
+            latex.SetTextFont(42)
+            latex.SetTextAlign(align_)
+            latex.SetTextSize(extraTextSize * t * pad_ratio)
+            if pad_ratio_raw > 0.8:
+                latex.DrawLatex(l + (relPosX + 0.081) * (1 - l - r), posY_ - 0.007 , "data")
+            if pad_ratio_raw < 0.8:
+                latex.DrawLatex(l + (relPosX + 0.065) * (1 - l - r), posY_ - 0.007 , "data")
+        else:
+            latex.SetTextFont(cmsTextFont)
+            latex.SetTextSize(cmsTextSize * t * pad_ratio)
+            latex.SetTextAlign(align_)
+            latex.DrawLatex(posX_, posY_, cmsText)
         if writeExtraText:
             latex.SetTextFont(extraTextFont)
             latex.SetTextAlign(align_)
@@ -496,7 +522,7 @@ def DrawCMSLogo(
         latex.DrawLatex(posX_, posY_, extraText)
 
 
-def DrawTitle(pad, text, align, textSize=0.6):
+def DrawTitle(pad, text, align, textSize=0.6, textfont=42):
     pad_backup = R.gPad
     pad.cd()
     t = pad.GetTopMargin()
@@ -515,7 +541,7 @@ def DrawTitle(pad, text, align, textSize=0.6):
     latex.SetNDC()
     latex.SetTextAngle(0)
     latex.SetTextColor(R.kBlack)
-    latex.SetTextFont(42)
+    latex.SetTextFont(textfont)
     latex.SetTextSize(textSize * t * pad_ratio)
 
     y_off = 1 - t + textOffset * t + 0.0055
