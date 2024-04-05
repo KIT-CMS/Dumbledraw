@@ -518,7 +518,7 @@ x_label:
     ME_costhetastar: 'MELA cos(#Theta*)'
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
-emt:
+  emt:
     # Dilepton Quantitieshttps://mattermost.web.cern.ch/cms-htt/messages/@rwolf
     yield: "Total Yield"
     m_vis: 'Visible di-#tau mass / GeV'
@@ -1218,6 +1218,8 @@ emt:
     ME_phi: "MELA #Phi"
     ME_phi1: "MELA #Phi_{1}"
 legend_label:
+  rare: 'rare'
+  rem_H: 'other H'
   HTT: "H#rightarrow#tau#tau"
   ggH: "gg#rightarrowH"
   qqH: "qq#rightarrowH"
@@ -1319,4 +1321,3 @@ legend_label:
   jetFakesQCD: 'Jet#rightarrow^{}#tau_{h} (QCD)'
   jetFakesTT: 'Jet#rightarrow^{}#tau_{h} (TT)'
   jetFakesEMB: 'Jet#rightarrow^{}#tau_{h}'
-  data_obs: 'Data'
