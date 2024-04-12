@@ -10,7 +10,6 @@ import yaml
 
 
 class Rootfile_parser(object):
-
     _dataset_map = {
         "data": "data",
         "ggZZ": "ggZZ",

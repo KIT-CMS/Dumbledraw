@@ -152,7 +152,14 @@ class Plot(object):
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
 
-    def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False, thesisstyle=False):
+    def DrawCMS(
+        self,
+        position=0,
+        preliminary=True,
+        subtext="",
+        own_work=False,
+        thesisstyle=False,
+    ):
         additional_string = ""
         if subtext != "":
             additional_string = subtext

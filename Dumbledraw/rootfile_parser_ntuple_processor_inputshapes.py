@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 
 
 class Rootfile_parser(object):
-
     _dataset_map = {
         "data": "data",
         "ZTT": "DY",
