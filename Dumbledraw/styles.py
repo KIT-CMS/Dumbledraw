@@ -6,6 +6,7 @@ logger = logging.getLogger(__name__)
 
 COL_STORE = []
 labels_path = "Dumbledraw/Dumbledraw/labels.yaml"
+colors_path = "Dumbledraw/Dumbledraw/colors.yaml"
 
 
 def CreateTransparentColor(color, alpha):
@@ -19,83 +20,21 @@ def CreateTransparentColor(color, alpha):
     return new_idx
 
 
-legend_label_dict = yaml.load(open(labels_path))["legend_label"]
-x_label_dict = yaml.load(open(labels_path))["x_label"]
+def load_colors(colors_path):
+    color_dict = yaml.safe_load(open(colors_path))["colors"]
+    for key, value in color_dict.items():
+        if isinstance(value, str):
+            color_dict[key] = R.TColor.GetColor(value)
+        if isinstance(value, list):
+            color_dict[key] = R.TColor.GetColor(value[0], value[1], value[2])
+    color_dict["unc"] = CreateTransparentColor(12, 0.4)
+    return color_dict
 
-color_dict = {
-    "rem_VV": R.TColor.GetColor("#6F2D35"),
-    "rem_VH": R.TColor.GetColor("#ffb55a"),
-    "rem_ttbar": R.TColor.GetColor("#ffee65"),
-    # "VVToQ": R.TColor.GetColor("#001EFF"),
-    "WHplus": R.TColor.GetColor("#fd7f6f"),
-    "WHminus": R.TColor.GetColor("#6fedfd"),
-    "ZZ": R.TColor.GetColor("#7eb0d5"),
-    "WZ": R.TColor.GetColor("#b2e061"),
-    "VVV": R.TColor.GetColor("#bd7ebe"),
-    "VHWW": R.TColor.GetColor("#ffb55a"),
-    "TTV": R.TColor.GetColor("#ffee65"),
-    "ggZZ": R.TColor.GetColor("#beb9db"),
-    "Wjets": R.TColor.GetColor("#0d88e6"),
-    "DY": R.TColor.GetColor("#8bd3c7"),
-    "ggH": R.TColor.GetColor("#fed766"),
-    "qqH": R.TColor.GetColor("#2ab7ca"),
-    "VH": R.TColor.GetColor("#001EFF"),
-    "WH": R.TColor.GetColor("#001EFF"),
-    "ZH": R.TColor.GetColor("#001EFF"),
-    "ttH": R.TColor.GetColor("#FF00FF"),
-    #    "HWW": R.TColor.GetColor("#FF8C00"),
-    #    "ggH_hww": R.TColor.GetColor("#FF8C00"),
-    #    "qqH_hww": R.TColor.GetColor("#FF8C00"),
-    "HWW": R.TColor.GetColor("#006106"),
-    "ggH_hww": R.TColor.GetColor("#006106"),
-    "qqH_hww": R.TColor.GetColor("#006106"),
-    "dummy": R.TColor.GetColor(254, 74, 73),
-    #    "inclusive": R.TColor.GetColor(254, 74, 73),
-    "ZTT": R.TColor.GetColor(248, 206, 104),
-    "ZTT_NLO": R.TColor.GetColor(248, 206, 104),
-    "EMB": R.TColor.GetColor(248, 206, 104),
-    "MUEMB": R.TColor.GetColor(100, 192, 232),
-    "ZLL": R.TColor.GetColor(100, 192, 232),
-    "ZL": R.TColor.GetColor(100, 192, 232),
-    "ZJ": R.TColor.GetColor("#64DE6A"),
-    "ZLL_NLO": R.TColor.GetColor(100, 192, 232),
-    "ZL_NLO": R.TColor.GetColor(100, 192, 232),
-    "ZJ_NLO": R.TColor.GetColor("#64DE6A"),
-    "TT": R.TColor.GetColor(155, 152, 204),
-    "TTT": R.TColor.GetColor(155, 152, 204),
-    "TTL": R.TColor.GetColor(155, 152, 204),
-    "TTJ": R.TColor.GetColor(215, 130, 204),
-    "W": R.TColor.GetColor(222, 90, 106),
-    "W_NLO": R.TColor.GetColor(222, 90, 106),
-    "WT": R.TColor.GetColor(222, 90, 106),
-    "WL": R.TColor.GetColor(222, 150, 80),
-    "VV": R.TColor.GetColor("#6F2D35"),
-    "VVT": R.TColor.GetColor("#6F2D35"),
-    "VVJ": R.TColor.GetColor("#c38a91"),
-    "VVL": R.TColor.GetColor("#6F2D35"),
-    "ST": R.TColor.GetColor("#d0f0c1"),
-    "STT": R.TColor.GetColor("#d0f0c1"),
-    "STL": R.TColor.GetColor("#d0f0c1"),
-    "QCD": R.TColor.GetColor(250, 202, 255),
-    "QCDEMB": R.TColor.GetColor(250, 202, 255),
-    "QCD_NLO": R.TColor.GetColor(250, 202, 255),
-    "QCDEMB_NLO": R.TColor.GetColor(250, 202, 255),
-    "EWK": R.TColor.GetColor("#E1F5A9"),
-    "EWKT": R.TColor.GetColor("#E1F5A9"),
-    "EWKL": R.TColor.GetColor("#E1F5A9"),
-    "EWKJ": R.TColor.GetColor("#E1F5A9"),
-    "EWKZ": R.TColor.GetColor("#E1F5A9"),
-    "jetFakes": R.TColor.GetColor(192, 232, 100),
-    "jetFakesWH": R.TColor.GetColor("#FCBACB"),
-    "jetFakesW": R.TColor.GetColor(222, 90, 106),
-    "jetFakesQCD": R.TColor.GetColor(250, 202, 255),
-    "jetFakesTT": R.TColor.GetColor(155, 152, 204),
-    "jetFakesEMB": R.TColor.GetColor(192, 232, 100),
-    "jetFakesCMB": R.TColor.GetColor(250, 202, 255),
-    "TotalBkg": R.TColor.GetColor(211, 211, 211),
-    "REST": R.TColor.GetColor("#B0C4DE"),
-    "unc": CreateTransparentColor(12, 0.4),
-}
+
+legend_label_dict = yaml.safe_load(open(labels_path))["legend_label"]
+x_label_dict = yaml.safe_load(open(labels_path))["x_label"]
+
+color_dict = load_colors(colors_path)
 
 
 def SetStyle(name, **kwargs):
@@ -148,13 +87,7 @@ def SetTDRStyle():
     R.gStyle.SetHistLineColor(1)
     R.gStyle.SetHistLineStyle(0)
     R.gStyle.SetHistLineWidth(1)
-    # R.gStyle.SetLegoInnerR(Float_t rad = 0.5)
-    # R.gStyle.SetNumberContours(Int_t number = 20)
-
     R.gStyle.SetEndErrorSize(2)
-    # R.gStyle.SetErrorMarker(20)
-    # R.gStyle.SetErrorX(0.)
-
     R.gStyle.SetMarkerStyle(20)
 
     # For the fit/function:
@@ -166,8 +99,6 @@ def SetTDRStyle():
 
     # For the date:
     R.gStyle.SetOptDate(0)
-    # R.gStyle.SetDateX(Float_t x = 0.01)
-    # R.gStyle.SetDateY(Float_t y = 0.01)
 
     # For the statistics box:
     R.gStyle.SetOptFile(0)
@@ -181,9 +112,6 @@ def SetTDRStyle():
     R.gStyle.SetStatBorderSize(1)
     R.gStyle.SetStatH(0.1)
     R.gStyle.SetStatW(0.15)
-    # R.gStyle.SetStatStyle(Style_t style = 1001)
-    # R.gStyle.SetStatX(Float_t x = 0)
-    # R.gStyle.SetStatY(Float_t y = 0)
 
     # Margins:
     R.gStyle.SetPadTopMargin(0.05)
@@ -198,29 +126,18 @@ def SetTDRStyle():
     R.gStyle.SetTitleTextColor(1)
     R.gStyle.SetTitleFillColor(10)
     R.gStyle.SetTitleFontSize(0.05)
-    # R.gStyle.SetTitleH(0); # Set the height of the title box
-    # R.gStyle.SetTitleW(0); # Set the width of the title box
-    # R.gStyle.SetTitleX(0); # Set the position of the title box
-    # R.gStyle.SetTitleY(0.985); # Set the position of the title box
-    # R.gStyle.SetTitleStyle(Style_t style = 1001)
-    # R.gStyle.SetTitleBorderSize(2)
 
     # For the axis titles:
     R.gStyle.SetTitleColor(1, "XYZ")
     R.gStyle.SetTitleFont(42, "XYZ")
     R.gStyle.SetTitleSize(0.06, "XYZ")
-    # Another way to set the size?
-    # R.gStyle.SetTitleXSize(Float_t size = 0.02)
-    # R.gStyle.SetTitleYSize(Float_t size = 0.02)
     R.gStyle.SetTitleXOffset(0.9)
     R.gStyle.SetTitleYOffset(1.25)
-    # R.gStyle.SetTitleOffset(1.1, 'Y'); # Another way to set the Offset
 
     # For the axis labels:
-
     R.gStyle.SetLabelColor(1, "XYZ")
     R.gStyle.SetLabelFont(42, "XYZ")
-    R.gStyle.SetLabelOffset(0.007, "XYZ")
+    R.gStyle.SetLabelOffset(0.012, "XYZ")
     R.gStyle.SetLabelSize(0.05, "XYZ")
 
     # For the axis:
@@ -239,18 +156,6 @@ def SetTDRStyle():
 
     # Postscript options:
     R.gStyle.SetPaperSize(20.0, 20.0)
-    # R.gStyle.SetLineScalePS(Float_t scale = 3)
-    # R.gStyle.SetLineStyleString(Int_t i, const char* text)
-    # R.gStyle.SetHeaderPS(const char* header)
-    # R.gStyle.SetTitlePS(const char* pstitle)
-
-    # R.gStyle.SetBarOffset(Float_t baroff = 0.5)
-    # R.gStyle.SetBarWidth(Float_t barwidth = 0.5)
-    # R.gStyle.SetPaintTextFormat(const char* format = 'g')
-    # R.gStyle.SetPalette(Int_t ncolors = 0, Int_t* colors = 0)
-    # R.gStyle.SetTimeOffset(Double_t toffset)
-    # R.gStyle.SetHistMinimumZero(kTRUE)
-
     R.gStyle.SetHatchesLineWidth(5)
     R.gStyle.SetHatchesSpacing(0.05)
 
