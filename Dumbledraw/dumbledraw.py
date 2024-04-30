@@ -152,14 +152,7 @@ class Plot(object):
                 begin_left = 0.145
             latex2.DrawLatex(begin_left, 0.960, text)
 
-    def DrawCMS(
-        self,
-        position=0,
-        preliminary=True,
-        subtext="",
-        own_work=False,
-        thesisstyle=False,
-    ):
+    def DrawCMS(self, position=0, preliminary=True, subtext="", own_work=False, thesisstyle=False):
         additional_string = ""
         if subtext != "":
             additional_string = subtext
@@ -874,6 +867,8 @@ class Subplot(object):
                     hist[0].SetMarkerSize(markersize)
                     hist[0].SetLineStyle(linestyle)
                     hist[0].SetFillStyle(fillstyle)
+                else:
+                    raise Exception("No object with name %s found in booked histograms" % name)
 
     # creates stack from registered histograms defined via name or group name
     def create_stack(self, hist_names, name, group_name="invisible"):
