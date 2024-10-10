@@ -158,7 +158,7 @@ class Plot(object):
             additional_string = subtext
         else:
             if preliminary:
-                additional_string = "Preliminary"
+                additional_string = "private work"
             if own_work:
                 additional_string = "Own Work"
 
@@ -168,7 +168,7 @@ class Plot(object):
                 "CMS",
                 additional_string,
                 11,
-                0.115,
+                0.085,
                 0.05,
                 1.0,
                 "",
@@ -466,7 +466,7 @@ class Subplot(object):
     # adds histogram to subplot and assign individual name and group name. Default group name = "invisible" which is ignored by DrawAll function.
     def add_hist(self, hist, name, group_name="invisible"):
         if name in list(self._hists.keys()):
-            logger.fatal("Histogram name %s already used!")
+            logger.fatal("Histogram name %s already used!" % name)
             raise Exception
         if not (isinstance(hist, R.TH1D) or isinstance(hist, R.TH1F)):
             logger.fatal(
@@ -481,7 +481,7 @@ class Subplot(object):
 
     def add_graph(self, graph, name, group_name="invisible"):
         if name in list(self._graphs.keys()):
-            logger.fatal("Graph name %s already used!")
+            logger.fatal("Graph name %s already used!" % name)
             raise Exception
         if not isinstance(graph, R.TGraph):
             logger.fatal(
@@ -867,6 +867,10 @@ class Subplot(object):
                     hist[0].SetMarkerSize(markersize)
                     hist[0].SetLineStyle(linestyle)
                     hist[0].SetFillStyle(fillstyle)
+                else:
+                    raise Exception(
+                        "No object with name %s found in booked histograms" % name
+                    )
 
     # creates stack from registered histograms defined via name or group name
     def create_stack(self, hist_names, name, group_name="invisible"):

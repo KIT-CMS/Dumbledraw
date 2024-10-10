@@ -27,7 +27,7 @@ class Rootfile_parser(object):
         if mode == "standard":
             self._hist_hash = "{channel}_{category}{plottype}/{process}{unc}"
         elif mode == "CombineHarvester":
-            self._hist_hash = "htt_{channel}_{category}_{era}{plottype}/{process}{unc}"
+            self._hist_hash = "nmssm_{channel}_{category}_{era}{plottype}/{process}{unc}"
         else:
             logger.fatal("Cannot detect mode to open file {}.".format(mode))
             raise Exception

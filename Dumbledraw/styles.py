@@ -6,6 +6,7 @@ logger = logging.getLogger(__name__)
 
 COL_STORE = []
 labels_path = "Dumbledraw/Dumbledraw/labels.yaml"
+colors_path = "Dumbledraw/Dumbledraw/colors.yaml"
 
 
 def CreateTransparentColor(color, alpha):
@@ -19,75 +20,119 @@ def CreateTransparentColor(color, alpha):
     return new_idx
 
 
+
+def load_colors(colors_path):
+    color_dict = yaml.safe_load(open(colors_path))["colors"]
+    for key, value in color_dict.items():
+        if isinstance(value, str):
+            color_dict[key] = R.TColor.GetColor(value)
+        if isinstance(value, list):
+            color_dict[key] = R.TColor.GetColor(value[0], value[1], value[2])
+    color_dict["unc"] = CreateTransparentColor(12, 0.4)
+    return color_dict
+
+
 legend_label_dict = yaml.safe_load(open(labels_path))["legend_label"]
 x_label_dict = yaml.safe_load(open(labels_path))["x_label"]
 
-color_dict = {
-#    "ggH": R.TColor.GetColor("#fed766"),
-#    "qqH": R.TColor.GetColor("#2ab7ca"),
+color_dict = load_colors(colors_path)
+
+# legend_label_dict = yaml.safe_load(open(labels_path))["legend_label"]
+# x_label_dict = yaml.safe_load(open(labels_path))["x_label"]
+
+# color_dict = {
+# #    "ggH": R.TColor.GetColor("#fed766"),
+# #    "qqH": R.TColor.GetColor("#2ab7ca"),
 #    "VH": R.TColor.GetColor("#001EFF"),
-#    "WH": R.TColor.GetColor("#001EFF"),
-#    "ZH": R.TColor.GetColor("#001EFF"),
-    "ggH": R.TColor.GetColor("#001EFF"),
-    "qqH": R.TColor.GetColor("#fc6203"),
-    "inclusive": R.TColor.GetColor("#d90021"), ##ba001c"),
-    "VH": R.TColor.GetColor("#2ab7ca"),
-    "WH": R.TColor.GetColor("#2ab7ca"),
-    "ZH": R.TColor.GetColor("#2ab7ca"),
-    "ttH": R.TColor.GetColor("#FF00FF"),
-#    "HWW": R.TColor.GetColor("#FF8C00"),
-#    "ggH_hww": R.TColor.GetColor("#FF8C00"),
-#    "qqH_hww": R.TColor.GetColor("#FF8C00"),
-    "HWW": R.TColor.GetColor("#006106"),
-    "ggH_hww": R.TColor.GetColor("#006106"),
-    "qqH_hww": R.TColor.GetColor("#006106"),
-    "dummy": R.TColor.GetColor(254, 74, 73),
-#    "inclusive": R.TColor.GetColor(254, 74, 73),
-    "ZTT": R.TColor.GetColor(248, 206, 104),
-    "ZTT_NLO": R.TColor.GetColor(248, 206, 104),
-    "EMB": R.TColor.GetColor(248, 206, 104),
-    "MUEMB": R.TColor.GetColor(100, 192, 232),
-    "ZLL": R.TColor.GetColor(100, 192, 232),
-    "ZL": R.TColor.GetColor(100, 192, 232),
-    "ZJ": R.TColor.GetColor("#64DE6A"),
-    "ZLL_NLO": R.TColor.GetColor(100, 192, 232),
-    "ZL_NLO": R.TColor.GetColor(100, 192, 232),
-    "ZJ_NLO": R.TColor.GetColor("#64DE6A"),
-    "TT": R.TColor.GetColor(155, 152, 204),
-    "TTT": R.TColor.GetColor(155, 152, 204),
-    "TTL": R.TColor.GetColor(155, 152, 204),
-    "TTJ": R.TColor.GetColor(215, 130, 204),
-    "W": R.TColor.GetColor(222, 90, 106),
-    "W_NLO": R.TColor.GetColor(222, 90, 106),
-    "WT": R.TColor.GetColor(222, 90, 106),
-    "WL": R.TColor.GetColor(222, 150, 80),
-    "VV": R.TColor.GetColor("#6F2D35"),
-    "VVT": R.TColor.GetColor("#6F2D35"),
-    "VVJ": R.TColor.GetColor("#c38a91"),
-    "VVL": R.TColor.GetColor("#6F2D35"),
-    "ST": R.TColor.GetColor("#d0f0c1"),
-    "STT": R.TColor.GetColor("#d0f0c1"),
-    "STL": R.TColor.GetColor("#d0f0c1"),
-    "QCD": R.TColor.GetColor(250, 202, 255),
-    "QCDEMB": R.TColor.GetColor(250, 202, 255),
-    "QCD_NLO": R.TColor.GetColor(250, 202, 255),
-    "QCDEMB_NLO": R.TColor.GetColor(250, 202, 255),
-    "EWK": R.TColor.GetColor("#E1F5A9"),
-    "EWKT": R.TColor.GetColor("#E1F5A9"),
-    "EWKL": R.TColor.GetColor("#E1F5A9"),
-    "EWKJ": R.TColor.GetColor("#E1F5A9"),
-    "EWKZ": R.TColor.GetColor("#E1F5A9"),
-    "jetFakes": R.TColor.GetColor(192, 232, 100),
-    "jetFakesW": R.TColor.GetColor(222, 90, 106),
-    "jetFakesQCD": R.TColor.GetColor(250, 202, 255),
-    "jetFakesTT": R.TColor.GetColor(155, 152, 204),
-    "jetFakesEMB": R.TColor.GetColor(192, 232, 100),
-    "jetFakesCMB": R.TColor.GetColor(250, 202, 255),
-    #"jetFakesCMB": R.TColor.GetColor(192, 232, 100),
-    "TotalBkg": R.TColor.GetColor(211,211,211),
-    "REST": R.TColor.GetColor("#B0C4DE"),
-    "unc": CreateTransparentColor(12, 0.4),
-}
+# #    "WH": R.TColor.GetColor("#001EFF"),
+# #    "ZH": R.TColor.GetColor("#001EFF"),
+#     # "ggH125": R.TColor.GetColor("#001EFF"),
+#     # "qqH125": R.TColor.GetColor("#fc6203"),
+#     "ggH125": R.TColor.GetColor(252, 229, 0),
+#     "qqH125": R.TColor.GetColor(40, 61, 59),
+#     "nmssm_Ybb": R.TColor.GetColor(229, 88, 18),
+#     "nmssm_Ytautau": R.TColor.GetColor(163, 16, 124),
+#     "inclusive": R.TColor.GetColor("#d90021"), ##ba001c"),
+#     "VH": R.TColor.GetColor("#2ab7ca"),
+#     "WH": R.TColor.GetColor("#2ab7ca"),
+#     "ZH": R.TColor.GetColor("#2ab7ca"),
+#     "ttH": R.TColor.GetColor("#FF00FF"),
+# #    "HWW": R.TColor.GetColor("#FF8C00"),
+# #    "ggH_hww": R.TColor.GetColor("#FF8C00"),
+# #    "qqH_hww": R.TColor.GetColor("#FF8C00"),
+#     "HWW": R.TColor.GetColor("#006106"),
+#     "ggH_hww": R.TColor.GetColor("#006106"),
+#     "qqH_hww": R.TColor.GetColor("#006106"),
+#     "dummy": R.TColor.GetColor(254, 74, 73),
+# #    "inclusive": R.TColor.GetColor(254, 74, 73),
+#     # "ZTT": R.TColor.GetColor(248, 206, 104),
+#     "ZTT_NLO": R.TColor.GetColor(219, 84, 97),
+#     # "EMB": R.TColor.GetColor(248, 206, 104),
+#     "EMB": R.TColor.GetColor(255, 190, 134),
+#     "MUEMB": R.TColor.GetColor(100, 192, 232),
+#     # "ZLL": R.TColor.GetColor(100, 192, 232),
+#     # "ZL": R.TColor.GetColor(100, 192, 232),
+#     # "ZJ": R.TColor.GetColor("#64DE6A"),
+#     "ZTT": R.TColor.GetColor(219, 84, 97), #R.TColor.GetColor(255, 190, 134),
+#     "ZLL": R.TColor.GetColor(219, 84, 97),
+#     "ZL": R.TColor.GetColor(219, 84, 97),
+#     "ZJ": R.TColor.GetColor(219, 84, 97), #R.TColor.GetColor(219, 254, 184),
+#     "ZLL_NLO": R.TColor.GetColor(219, 84, 97),
+#     "ZL_NLO": R.TColor.GetColor(219, 84, 97),
+#     "ZJ_NLO": R.TColor.GetColor(219, 84, 97),
+#     # "TT": R.TColor.GetColor(155, 152, 204),
+#     # "TTT": R.TColor.GetColor(155, 152, 204),
+#     # "TTL": R.TColor.GetColor(155, 152, 204),
+#     # "TTJ": R.TColor.GetColor(215, 130, 204),
+#     "TT": R.TColor.GetColor(112, 171, 175),
+#     "TTT": R.TColor.GetColor(112, 171, 175), #R.TColor.GetColor(255, 190, 134),
+#     "TTL": R.TColor.GetColor(112, 171, 175),
+#     "TTJ": R.TColor.GetColor(112, 171, 175), #R.TColor.GetColor(219, 254, 184),
+#     # "W": R.TColor.GetColor(222, 90, 106),
+#     "W": R.TColor.GetColor(218, 42, 153), #R.TColor.GetColor(219, 254, 184),
+#     "W_NLO": R.TColor.GetColor(222, 90, 106),
+#     "WT": R.TColor.GetColor(222, 90, 106),
+#     "WL": R.TColor.GetColor(222, 150, 80),
+#     # "VV": R.TColor.GetColor("#6F2D35"),
+#     # "VVT": R.TColor.GetColor("#6F2D35"),
+#     # "VVJ": R.TColor.GetColor("#c38a91"),
+#     # "VVL": R.TColor.GetColor("#6F2D35"),
+#     "VV": R.TColor.GetColor(212, 193, 236),
+#     "VVT": R.TColor.GetColor(212, 193, 236), #R.TColor.GetColor(255, 190, 134),
+#     "VVJ": R.TColor.GetColor(212, 193, 236), #R.TColor.GetColor(219, 254, 184),
+#     "VVL": R.TColor.GetColor(212, 193, 236),
+#     # "ST": R.TColor.GetColor("#d0f0c1"),
+#     # "STT": R.TColor.GetColor("#d0f0c1"),
+#     # "STL": R.TColor.GetColor("#d0f0c1"),
+#     # "STJ": R.TColor.GetColor("#d0f0c1"),
+#     "ST": R.TColor.GetColor(0, 167, 225),
+#     "STT": R.TColor.GetColor(0, 167, 225), #R.TColor.GetColor(255, 190, 134),
+#     "STL": R.TColor.GetColor(0, 167, 225),
+#     "STJ": R.TColor.GetColor(0, 167, 225), #R.TColor.GetColor(219, 254, 184),
+#     # "QCD": R.TColor.GetColor(250, 202, 255),
+#     # "QCDEMB": R.TColor.GetColor(250, 202, 255),
+#     "QCD": R.TColor.GetColor(219, 254, 184),
+#     "QCDEMB": R.TColor.GetColor(219, 254, 184),
+#     "QCD_NLO": R.TColor.GetColor(250, 202, 255),
+#     "QCDEMB_NLO": R.TColor.GetColor(250, 202, 255),
+#     "EWK": R.TColor.GetColor("#E1F5A9"),
+#     "EWKT": R.TColor.GetColor("#E1F5A9"),
+#     "EWKL": R.TColor.GetColor("#E1F5A9"),
+#     "EWKJ": R.TColor.GetColor("#E1F5A9"),
+#     "EWKZ": R.TColor.GetColor("#E1F5A9"),
+#     # "jetFakes": R.TColor.GetColor(192, 232, 100),
+#     "jetFakes": R.TColor.GetColor(219, 254, 184),
+#     "jetFakesW": R.TColor.GetColor(222, 90, 106),
+#     "jetFakesQCD": R.TColor.GetColor(250, 202, 255),
+#     "jetFakesTT": R.TColor.GetColor(155, 152, 204),
+#     # "jetFakesEMB": R.TColor.GetColor(192, 232, 100),
+#     "jetFakesEMB": R.TColor.GetColor(219, 254, 184),
+#     "jetFakesCMB": R.TColor.GetColor(250, 202, 255),
+#     #"jetFakesCMB": R.TColor.GetColor(192, 232, 100),
+#     "TotalBkg": R.TColor.GetColor(211,211,211),
+#     "REST": R.TColor.GetColor("#B0C4DE"),
+#     "unc": CreateTransparentColor(12, 0.4),
+# }
 
 
 def SetStyle(name, **kwargs):
@@ -212,7 +257,7 @@ def SetTDRStyle():
 
     R.gStyle.SetLabelColor(1, "XYZ")
     R.gStyle.SetLabelFont(42, "XYZ")
-    R.gStyle.SetLabelOffset(0.007, "XYZ")
+    R.gStyle.SetLabelOffset(0.012, "XYZ")
     R.gStyle.SetLabelSize(0.05, "XYZ")
 
     # For the axis:
@@ -498,7 +543,7 @@ def DrawCMSLogo(pad,
             latex.SetTextFont(extraTextFont)
             latex.SetTextAlign(align_)
             latex.SetTextSize(extraTextSize * t * pad_ratio)
-            latex.DrawLatex(posX_, posY_ - relExtraDY * cmsTextSize * t, extraText)
+            latex.DrawLatex(l + (relPosX + 0.033) * (1 - l - r), posY_ - relExtraDY * cmsTextSize * t, extraText)
             if writeExtraText2:
                 latex.DrawLatex(
                     posX_, posY_ - 1.8 * relExtraDY * cmsTextSize * t, extraText2

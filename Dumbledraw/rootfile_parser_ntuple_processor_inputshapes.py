@@ -22,6 +22,9 @@ class Rootfile_parser(object):
         "TTT": "TT",
         "TTL": "TT",
         "TTJ": "TT",
+        "STT": "ST",
+        "STL": "ST",
+        "STJ": "ST",
         "VVT": "VV",
         "VVL": "VV",
         "VVJ": "VV",
@@ -38,7 +41,17 @@ class Rootfile_parser(object):
         "jetFakes_NLO": "jetFakesMC_NLO",
         "ggH125": "ggH",
         "qqH125": "qqH",
+        "VH": "VH",
+        "ggH_tt": "ggH_tt",
+        "qqH_tt": "qqH_tt",
+        "VH_tt": "VH_tt",
+        "ggH_bb": "ggH_bb",
+        "qqH_bb": "qqH_bb",
+        "VH_bb": "VH_bb",
+        "EWK": "EWK",
         "wFakes": "wFakes",
+        "nmssm_Ybb": "nmssm_Ybb",
+        "nmssm_Ytautau": "nmssm_Ytautau",
     }
 
     _process_map = {
@@ -52,6 +65,9 @@ class Rootfile_parser(object):
         "TTT": "TT-TTT",
         "TTL": "TT-TTL",
         "TTJ": "TT-TTJ",
+        "STT": "ST-STT",
+        "STL": "ST-STL",
+        "STJ": "ST-STJ",
         "VVT": "VV-VVT",
         "VVL": "VV-VVL",
         "VVJ": "VV-VVJ",
@@ -66,19 +82,30 @@ class Rootfile_parser(object):
         "jetFakes": "jetFakesMC",
         "ggH125": "ggH125",
         "qqH125": "qqH125",
+        "VH": "VH125",
+        "ggH_tt": "ggH125",
+        "qqH_tt": "qqH125",
+        "VH_tt": "VH125",
+        "ggH_bb": "ggH125",
+        "qqH_bb": "qqH125",
+        "VH_bb": "VH125",
+        "EWK": "EVK",
         "wFakes": "wFakes",
+        "nmssm_Ybb": "NMSSM_Ybb",
+        "nmssm_Ytautau": "NMSSM_Ytt",
     }
 
-    def __init__(self, inputrootfilename, variable):
+    def __init__(self, inputrootfilename, variable, tt_boosted):
         self._rootfilename = inputrootfilename
         self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._variable = variable
+        self._tt_boosted = tt_boosted
 
     @property
     def rootfile(self):
         return self._rootfile
 
-    def get(self, channel, process, category=None, shape_type="Nominal"):
+    def get(self, channel, process, category=None, shape_type="Nominal", analysis_plots=False):
         dataset = self._dataset_map[process]
         if category is None:
             category = "" if "data" in process else "-" + self._process_map[process]
@@ -88,13 +115,26 @@ class Rootfile_parser(object):
                 if "data" in process
                 else "-" + "-".join([self._process_map[process], category])
             )
-        hist_hash = "{dataset}#{channel}{category}#{shape_type}#{variable}".format(
-            dataset=dataset,
-            channel=channel,
-            category=category,
-            shape_type=shape_type,
-            variable=self._variable,
-        )
+        if analysis_plots:
+            appendix = ""
+            if self._tt_boosted:
+                appendix = "_boosted"
+            category = category + f"-{self._variable}"
+            hist_hash = "{dataset}#{channel}{category}#{shape_type}#{variable}".format(
+                dataset=dataset,
+                channel=channel,
+                category=category,
+                shape_type=shape_type,
+                variable="mt_score"+appendix,
+            )
+        else:
+            hist_hash = "{dataset}#{channel}{category}#{shape_type}#{variable}".format(
+                dataset=dataset,
+                channel=channel,
+                category=category,
+                shape_type=shape_type,
+                variable=self._variable,
+            )
         logger.debug("Try to access %s in %s" % (hist_hash, self._rootfilename))
         print("rootfile: ", self._rootfile.Get(hist_hash), " hash: ", hist_hash)
 
