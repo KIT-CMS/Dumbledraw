@@ -753,22 +753,6 @@ x_label:
     ME_costhetastar: 'MELA cos(#Theta*)'
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'  
   mtt:
     # Dilepton Quantities
     yield: "Total Yield"
@@ -853,22 +837,6 @@ x_label:
     ME_costhetastar: 'MELA cos(#Theta*)'
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'  
   ett:
     # Dilepton Quantities
     yield: "Total Yield"
@@ -953,22 +921,6 @@ x_label:
     ME_costhetastar: 'MELA cos(#Theta*)'
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'  
   eem:
     # Dilepton Quantities
     yield: "Total Yield"
@@ -1056,22 +1008,6 @@ x_label:
     ME_costhetastar: 'MELA cos(#Theta*)'
     ME_phi: 'MELA #Phi'
     ME_phi1: 'MELA #Phi_{1}'
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'  
   mme:
     # Dilepton Quantities
     yield: "Total Yield"
@@ -1123,58 +1059,9 @@ x_label:
     beta_2: 'Trailing b-Jet #eta'
 
     # MET quantities
-    met: 'Missing transverse Energy (Puppi) / GeV'
-    metphi: 'Missing transverse Energy (Puppi) #varphi'
-    pfmet: 'MET (Puppi) / GeV'
-    pfmetphi: 'Missing transverse Energy (PF) #varphi'
+    
     pfmet_uncorrected: 'met (PF) uncorrected / GeV'
     met_uncorrected: 'met (Puppi) uncorrected / GeV'
-
-    # Lepton-MET quantities
-    mt_1: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (PF) / GeV'
-    mt_2: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    mt_3: 'Transverse mass m_{T}(^{}#mu, #slash{E}_{T}) / GeV'
-    mt_tot: 'Total transverse mass m_{T}^{tot} (PF) / GeV'
-    mTdileptonMET: 'Transverse mass m_{T}(#mu+^{}#tau_{h}, #slash{E}_{T}) (PF) / GeV'
-    pZetaMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (PF) / GeV'
-    mt_1_puppi: 'Transverse mass m_{T}(#mu, #slash{E}_{T}) (Puppi) / GeV'
-    mt_2_puppi: 'Transverse mass m_{T}(^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    mt_tot_puppi: 'Total transverse mass m_{T}^{tot} (Puppi) / GeV'
-    mTdileptonMET_puppi: 'Transverse mass m_{T}(#mu+^{}#tau_{h}, #slash{E}_{T}) (Puppi) / GeV'
-    pZetaPuppiMissVis: 'p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV'
-
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
-    # MELA quantities
-    ME_D: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_vbf_vs_Z: 'MELA D^{VBF}_{Z + 2 Jets}'
-    ME_ggh_vs_Z: 'MELA D^{ggH}_{Z + 2 Jets}'
-    ME_vbf_vs_ggh: 'MELA D^{VBF}_{ggH}'
-    ME_ggh: 'MELA ^{}P(ggH)'
-    ME_vbf: 'MELA ^{}P(VBF)'
-    ME_z2j_1: 'MELA ^{}P_{1}(Z + 2 Jets)'
-    ME_z2j_2: 'MELA ^{}P_{2}(Z + 2 Jets)'
-    ME_q2v1: 'MELA Q^{2}(^{}V_{1}) / GeV^{2}'
-    ME_q2v2: 'MELA Q^{2}(^{}V_{2}) / GeV^{2}'
-    ME_costheta1: 'MELA cos(#Theta_{1})'
-    ME_costheta2: 'MELA cos(#Theta_{2})'
-    ME_costhetastar: 'MELA cos(#Theta*)'
-    ME_phi: 'MELA #Phi'
-    ME_phi1: 'MELA #Phi_{1}'
 
     # MET quantities
     met: "Missing transverse Energy (Puppi) / GeV"
@@ -1187,6 +1074,7 @@ x_label:
     # Lepton-MET quantities
     mt_1: "Transverse mass m_{T}(e_{1}, #slash{E}_{T}) (Puppi) / GeV"
     mt_2: "Transverse mass m_{T}(e_{2}, #slash{E}_{T}) (Puppi) / GeV"
+    mt_3: 'Transverse mass m_{T}(^{}#mu, #slash{E}_{T}) / GeV'
     mt_tot: "Total transverse mass m_{T}^{tot} (Puppi) / GeV"
     mTdileptonMET: "Transverse mass m_{T}(e_{1}+e_{2}, #slash{E}_{T}) (Puppi) / GeV"
     pZetaMissVis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
@@ -1220,22 +1108,18 @@ x_label:
 legend_label:
   rare: 'rare'
   rem_H: 'other H'
-  HTT: "H#rightarrow#tau#tau"
-  ggH: "gg#rightarrowH"
   qqH: "qq#rightarrowH"
   VH: "qq#rightarrowVH"
   WH: "qq#rightarrowWH"
-  ZH: "qq#rightarrowZH"
   ZTT: "Z#rightarrow#tau#tau"
   EMB: "#tau embedded"
   EMBCMB: "Z/t#bar{t}/VV#rightarrow#tau#tau"
   MUEMB: "#mu#rightarrow#mu embedded"
   TotalBkg: "Background"
   REST: "Sim. Bkg."
-  ZLL: "Z#rightarrowll"
+  ZLL_mm: "Z#rightarrow#mu#mu"
   ZL: "Z#rightarrowll"
   ZJ: "Z#rightarrowll (jet#rightarrow^{}#tau_{h})"
-  TT: "t#bar{t}"
   TTT: "t#bar{t} (#tau#tau)"
   TTL: "t#bar{t} (l#tau)"
   TTJ: "t#bar{t} (jet#rightarrow^{}#tau_{h})"
@@ -1264,7 +1148,6 @@ legend_label:
   jetFakesEMB: "Jet#rightarrow^{}#tau_{h}"
   data_obs: "Data"
   VHWW: 'VH#rightarrowWW'
-  rem_H: 'other H'
   VVV: "VVV"
   ggZZ: "ggZZ"
   TTV: "ttVjets"
@@ -1282,42 +1165,5 @@ legend_label:
   rem_VV: "VV#rightarrowq"
   HTT: 'H#rightarrow#tau#tau'
   ggH: 'gg#rightarrowH'
-  qqH: 'qq#rightarrowH'
-  VH: 'qq#rightarrowVH'
-  WH: 'qq#rightarrowWH'
-  ZH: 'qq#rightarrowZH'
-  ZTT: 'Z#rightarrow#tau#tau'
-  EMB: '#tau embedded'
-  EMBCMB: 'Z/t#bar{t}/VV#rightarrow#tau#tau'
-  TotalBkg: 'Background' 
-  REST: 'Sim. Bkg.'
+  qqZH: 'qq#rightarrowZH'
   ZLL: 'Z#rightarrowll'
-  ZL: 'Z#rightarrowll'
-  ZJ: 'Z#rightarrowll (jet#rightarrow^{}#tau_{h})'
-  TT: 't#bar{t}'
-  TTT: 't#bar{t} (#tau#tau)'
-  TTL: 't#bar{t} (l#tau)'
-  TTJ: 't#bar{t} (jet#rightarrow^{}#tau_{h})'
-  W: 'W+jets'
-  WT: '(W#rightarrow#tau)+jets'
-  WL: '(W#slash{#rightarrow}#tau)+jets'
-  VV: 'Diboson'
-  VVT: 'Diboson (#tau#tau)'
-  VVJ: 'Diboson (jet#rightarrow^{}#tau_{h})'
-  VVL: 'Diboson (l#tau)'
-  ST: 'Single t'
-  STT: 'Single t'
-  STL: 'Single t'
-  QCD: 'QCD multijet'
-  QCDEMB: 'QCD multijet'
-  EWK: 'Electroweak'
-  EWKT: 'Electroweak (t#rightarrow^{}#tau_{h})'
-  EWKL: 'Electroweak (l#rightarrow^{}#tau_{h})'
-  EWKJ: 'Electroweak (jet#rightarrow^{}#tau_{h})'
-  EWKZ: 'EWKZ'
-  jetFakes: 'Jet#rightarrow^{}#tau_{h}'
-  jetFakesCMB: 'Jet#rightarrow^{}#tau'
-  jetFakesW: 'Jet#rightarrow^{}#tau_{h} (W)'
-  jetFakesQCD: 'Jet#rightarrow^{}#tau_{h} (QCD)'
-  jetFakesTT: 'Jet#rightarrow^{}#tau_{h} (TT)'
-  jetFakesEMB: 'Jet#rightarrow^{}#tau_{h}'

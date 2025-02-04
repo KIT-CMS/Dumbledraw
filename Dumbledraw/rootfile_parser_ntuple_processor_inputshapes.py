@@ -38,6 +38,21 @@ class Rootfile_parser(object):
         "ggH125": "ggH",
         "qqH125": "qqH",
         "wFakes": "wFakes",
+        "embminus4p0": "embminus4p0", "embminus3p9": "embminus3p9", "embminus3p8": "embminus3p8", "embminus3p7": "embminus3p7", "embminus3p6": "embminus3p6",
+        "embminus3p5": "embminus3p5", "embminus3p4": "embminus3p4", "embminus3p3": "embminus3p3", "embminus3p2": "embminus3p2", "embminus3p1": "embminus3p1",
+        "embminus3p0": "embminus3p0", "embminus2p9": "embminus2p9", "embminus2p8": "embminus2p8", "embminus2p7": "embminus2p7", "embminus2p6": "embminus2p6",
+        "embminus2p5": "embminus2p5", "embminus2p4": "embminus2p4", "embminus2p3": "embminus2p3", "embminus2p2": "embminus2p2", "embminus2p1": "embminus2p1",
+        "embminus2p0": "embminus2p0", "embminus1p9": "embminus1p9", "embminus1p8": "embminus1p8", "embminus1p7": "embminus1p7", "embminus1p6": "embminus1p6",
+        "embminus1p5": "embminus1p5", "embminus1p4": "embminus1p4", "embminus1p3": "embminus1p3", "embminus1p2": "embminus1p2", "embminus1p1": "embminus1p1",
+        "embminus1p0": "embminus1p0", "embminus0p9": "embminus0p9", "embminus0p8": "embminus0p8", "embminus0p7": "embminus0p7", "embminus0p6": "embminus0p6",
+        "embminus0p5": "embminus0p5", "embminus0p4": "embminus0p4", "embminus0p3": "embminus0p3", "embminus0p2": "embminus0p2", "embminus0p1": "embminus0p1",
+        "emb0p0": "emb0p0", "emb0p1": "emb0p1", "emb0p2": "emb0p2", "emb0p3": "emb0p3", "emb0p4": "emb0p4", "emb0p5": "emb0p5", "emb0p6": "emb0p6",
+        "emb0p7": "emb0p7", "emb0p8": "emb0p8", "emb0p9": "emb0p9", "emb1p0": "emb1p0", "emb1p1": "emb1p1", "emb1p2": "emb1p2", "emb1p3": "emb1p3",
+        "emb1p4": "emb1p4", "emb1p5": "emb1p5", "emb1p6": "emb1p6", "emb1p7": "emb1p7", "emb1p8": "emb1p8", "emb1p9": "emb1p9", "emb2p0": "emb2p0",
+        "emb2p1": "emb2p1", "emb2p2": "emb2p2", "emb2p3": "emb2p3", "emb2p4": "emb2p4", "emb2p5": "emb2p5",
+        "emb2p6": "emb2p6", "emb2p7": "emb2p7", "emb2p8": "emb2p8", "emb2p9": "emb2p9", "emb3p0": "emb3p0",
+        "emb3p1": "emb3p1", "emb3p2": "emb3p2", "emb3p3": "emb3p3", "emb3p4": "emb3p4", "emb3p5": "emb3p5",
+        "emb3p6": "emb3p6", "emb3p7": "emb3p7", "emb3p8": "emb3p8", "emb3p9": "emb3p9", "emb4p0": "emb4p0"
     }
 
     _process_map = {
@@ -66,6 +81,21 @@ class Rootfile_parser(object):
         "ggH125": "ggH125",
         "qqH125": "qqH125",
         "wFakes": "wFakes",
+        "embminus4p0": "Embedded", "embminus3p9": "Embedded", "embminus3p8": "Embedded", "embminus3p7": "Embedded", "embminus3p6": "Embedded",
+        "embminus2p0": "Embedded", "embminus1p9": "Embedded", "embminus1p8": "Embedded", "embminus1p7": "Embedded", "embminus1p6": "Embedded",
+        "embminus3p5": "Embedded", "embminus3p4": "Embedded", "embminus3p3": "Embedded", "embminus3p2": "Embedded", "embminus3p1": "Embedded",
+        "embminus2p5": "Embedded", "embminus2p4": "Embedded", "embminus2p3": "Embedded", "embminus2p2": "Embedded", "embminus2p1": "Embedded",
+        "embminus3p0": "Embedded", "embminus2p9": "Embedded", "embminus2p8": "Embedded", "embminus2p7": "Embedded", "embminus2p6": "Embedded",
+        "embminus1p5": "Embedded", "embminus1p4": "Embedded", "embminus1p3": "Embedded", "embminus1p2": "Embedded", "embminus1p1": "Embedded",
+        "embminus1p0": "Embedded", "embminus0p9": "Embedded", "embminus0p8": "Embedded", "embminus0p7": "Embedded", "embminus0p6": "Embedded",
+        "embminus0p5": "Embedded", "embminus0p4": "Embedded", "embminus0p3": "Embedded", "embminus0p2": "Embedded", "embminus0p1": "Embedded",
+        "emb0p0": "Embedded", "emb0p1": "Embedded", "emb0p2": "Embedded", "emb0p3": "Embedded", "emb0p4": "Embedded", "emb0p5": "Embedded", "emb0p6": "Embedded",
+        "emb0p7": "Embedded", "emb0p8": "Embedded", "emb0p9": "Embedded", "emb1p0": "Embedded", "emb1p1": "Embedded", "emb1p2": "Embedded", "emb1p3": "Embedded",
+        "emb1p4": "Embedded", "emb1p5": "Embedded", "emb1p6": "Embedded", "emb1p7": "Embedded", "emb1p8": "Embedded", "emb1p9": "Embedded", "emb2p0": "Embedded",
+        "emb2p1": "Embedded", "emb2p2": "Embedded", "emb2p3": "Embedded", "emb2p4": "Embedded", "emb2p5": "Embedded",
+        "emb2p6": "Embedded", "emb2p7": "Embedded", "emb2p8": "Embedded", "emb2p9": "Embedded", "emb3p0": "Embedded",
+        "emb3p1": "Embedded", "emb3p2": "Embedded", "emb3p3": "Embedded", "emb3p4": "Embedded", "emb3p5": "Embedded",
+        "emb3p6": "Embedded", "emb3p7": "Embedded", "emb3p8": "Embedded", "emb3p9": "Embedded", "emb4p0": "Embedded"
     }
 
     def __init__(self, inputrootfilename, variable):
