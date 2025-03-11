@@ -43,6 +43,7 @@ colors:
   ST: '#717581'
   STL: '#5882ae' # mix of ZL and ST, not in the official palette
   STT: '#717581'
+  STJ: '#717581'
 
   # TTbar
   TT: '#832db6'

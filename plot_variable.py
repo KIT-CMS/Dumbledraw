@@ -83,11 +83,12 @@ def main(args):
                 #   Further arguments set general style.
                 plot = dd.Plot([0.05], "ModTDR", r=0.04, l=0.14)
 
-                # bkg_processes = ["EWK", "QCD", "VV", "W", "TTT", "TTJ", "ZJ", "ZL", "ZTT"]
+                # bkg_processes = ["EWK", "QCD", "VV", "ST", "W", "TTT", "TTJ", "ZJ", "ZL", "ZTT"]
                 bkg_processes = [
                     "EWK",
                     "QCD",
                     "VV",
+                    "ST",
                     "W",
                     "TTT",
                     "TTJ",
@@ -100,6 +101,8 @@ def main(args):
                         "QCD",
                         "VVT",
                         "VVJ",
+                        "STT",
+                        "STJ",
                         "W",
                         "TTT",
                         "TTJ",
