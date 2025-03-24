@@ -27,6 +27,7 @@ colors:
   ZJ_NLO: '#b9ac70'
 
   # ZL
+  Z: '#3f90da'
   ZL: '#3f90da'
   ZLL: '#3f90da'
   ZLL_NLO: '#3f90da'
@@ -43,7 +44,7 @@ colors:
   ST: '#717581'
   STL: '#5882ae' # mix of ZL and ST, not in the official palette
   STT: '#717581'
-  STJ: '#717581'
+  STJ: '#7175E1'
 
   # TTbar
   TT: '#832db6'
@@ -88,5 +89,7 @@ colors:
   unc: '#0C0C0C'
   inclusive: '#000000'
   REST: '#b9ac70'
+
+  rare: '#b9ac70'
 
 # main Procs

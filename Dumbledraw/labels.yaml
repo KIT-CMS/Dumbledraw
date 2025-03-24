@@ -1111,15 +1111,16 @@ legend_label:
   qqH: "qq#rightarrowH"
   VH: "qq#rightarrowVH"
   WH: "qq#rightarrowWH"
-  ZTT: "Z#rightarrow#tau#tau"
   EMB: "#tau embedded"
   EMBCMB: "Z/t#bar{t}/VV#rightarrow#tau#tau"
   MUEMB: "#mu#rightarrow#mu embedded"
   TotalBkg: "Background"
   REST: "Sim. Bkg."
-  ZLL_mm: "Z#rightarrow#mu#mu"
+  Z: "Z#rightarrowll"
+  ZLL_mm: "Z"
   ZL: "Z#rightarrowll"
   ZJ: "Z#rightarrowll (jet#rightarrow^{}#tau_{h})"
+  ZTT: "Z#rightarrow#tau#tau"
   TTT: "t#bar{t} (#tau#tau)"
   TTL: "t#bar{t} (l#tau)"
   TTJ: "t#bar{t} (jet#rightarrow^{}#tau_{h})"
@@ -1167,4 +1168,4 @@ legend_label:
   HTT: 'H#rightarrow#tau#tau'
   ggH: 'gg#rightarrowH'
   qqZH: 'qq#rightarrowZH'
-  ZLL: 'Z#rightarrowll'
+  rare: 'other'

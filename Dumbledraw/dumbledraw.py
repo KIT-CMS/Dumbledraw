@@ -1118,7 +1118,7 @@ class Legend(object):
                 self._subplots[subplot_index]._graphs[histname][0], label, style
             )
         else:
-            logger.fatal("Requested histogram for legend does not exist!")
+            logger.fatal(f"Requested histogram {histname} for legend does not exist in {self._subplots[subplot_index]._hists.keys()}")
             raise Exception
 
     def scaleTextSize(self, scale):
