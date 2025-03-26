@@ -17,9 +17,9 @@ colors:
   ZTT_NLO: '#ffa90e'
 
   # jetfakes
-  jetFakes: '#b9ac70'
-  jetFakesCMB: '#b9ac70'
-  jetFakesEMB: '#b9ac70'
+  jetFakes: '#a96b59'
+  jetFakesCMB: '#a96b59'
+  jetFakesEMB: '#a96b59'
   jetFakesQCD: '#717581'
   jetFakesTT: '#832db6'
   jetFakesW: '#e76300'

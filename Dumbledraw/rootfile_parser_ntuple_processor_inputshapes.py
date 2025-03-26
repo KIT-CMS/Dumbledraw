@@ -37,7 +37,6 @@ class Rootfile_parser(object):
         "jetFakes_NLO": "jetFakesMC_NLO",
         "ggH125": "ggH",
         "qqH125": "qqH",
-        "wFakes": "wFakes",
     }
 
     _process_map = {
@@ -65,7 +64,6 @@ class Rootfile_parser(object):
         "jetFakes": "jetFakesMC",
         "ggH125": "ggH125",
         "qqH125": "qqH125",
-        "wFakes": "wFakes",
     }
 
     def __init__(self, inputrootfilename, variable):
