@@ -50,6 +50,7 @@ class Rootfile_parser(object):
         "ttH": "ttH",
         "VH": "VH",
         "wFakes": "wFakes",
+        "HH2B2Tau": "HH2B2Tau",
     }
 
     _process_map = {
@@ -90,6 +91,7 @@ class Rootfile_parser(object):
         "ttH": "ttH125",
         "VH": "VH125",
         "wFakes": "wFakes",
+        "HH2B2Tau": "HH2B2Tau",
     }
 
     def __init__(self, inputrootfilename, variable):

@@ -82,6 +82,7 @@ colors:
   ZH: '#3f90da'
   WH: '#e76300'
   VH: '#e76300'
+  HH2B2Tau: '#bd1f01'
 
 # combined stuff
   dummy: '#bd1f01'
