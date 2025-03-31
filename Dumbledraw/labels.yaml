@@ -189,6 +189,7 @@ x_label:
     ME_phi1: "MELA #Phi_{1}"
   mt:
     # Dilepton Quantities
+    q_1: "Total Yield"
     yield: "Total Yield"
     m_vis: "Visible di-#tau mass / GeV"
     pt_vis: "Visible di-#tau p_{T} / GeV"
@@ -207,6 +208,16 @@ x_label:
     eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
+
+    phi_1: "Muon #varphi"
+    phi_2: "Hadronic Tau #varphi"
+    iso_1: "Isolation Muon"
+    iso_2: "Isolation Hadronic Tau"
+    pt_dijet: "Di-Jet p_{T} / GeV"
+    tau_decaymode_2: "Hadronic Tau Decay Mode"
+    deltaR_ditaupair: "#Delta R (#mu, #tau_{h})"
+    pzetamissvis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
+    mass_2: "m_{#tau_{h}} /GeV"
 
     # Lepton quantities
     pt_1: "Muon p_{T} / GeV"
