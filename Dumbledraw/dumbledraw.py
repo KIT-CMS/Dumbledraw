@@ -139,7 +139,7 @@ class Plot(object):
             latex2.SetTextAngle(0)
             latex2.SetTextColor(R.kBlack)
             latex2.SetTextSize(0.04)
-            latex2.DrawLatex(0.19, 0.720, text)
+            latex2.DrawLatex(0.15, 0.880, text)
         else:
             ypos = 0.960 if "_{" in text else 0.955
             latex2 = R.TLatex()
@@ -155,10 +155,11 @@ class Plot(object):
     def DrawCMS(
         self,
         position=0,
-        preliminary=True,
+        preliminary=False,
         subtext="",
         own_work=False,
         thesisstyle=False,
+        private=True,
     ):
         additional_string = ""
         if subtext != "":
@@ -168,6 +169,8 @@ class Plot(object):
                 additional_string = "Preliminary"
             if own_work:
                 additional_string = "Own Work"
+            if private:
+                additional_string = "Private Work (Data/Simulation)"
 
         if position == 0:
             styles.DrawCMSLogo(
