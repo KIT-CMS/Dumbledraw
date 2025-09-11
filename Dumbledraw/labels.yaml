@@ -208,6 +208,9 @@ x_label:
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
 
+    # NN quantities
+    NN_score: "NN output"
+
     # Lepton quantities
     pt_1: "Muon p_{T} / GeV"
     pt_2: "Hadronic Tau p_{T} / GeV"
@@ -299,6 +302,9 @@ x_label:
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
 
+    # NN quantities
+    NN_score: "NN output"
+
     # Lepton quantities
     pt_1: "Electron p_{T} / GeV"
     pt_2: "Hadronic Tau p_{T} / GeV"
@@ -382,6 +388,9 @@ x_label:
     eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
+
+    # NN quantities
+    NN_score: "NN output"
 
     # Lepton quantities
     pt_1: "Leading hadronic Tau p_{T} / GeV"
@@ -1105,6 +1114,7 @@ x_label:
     ME_costhetastar: "MELA cos(#Theta*)"
     ME_phi: "MELA #Phi"
     ME_phi1: "MELA #Phi_{1}"
+
 legend_label:
   rare: 'rare'
   rem_H: 'other H'

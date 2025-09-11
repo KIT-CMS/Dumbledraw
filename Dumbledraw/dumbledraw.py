@@ -155,9 +155,10 @@ class Plot(object):
     def DrawCMS(
         self,
         position=0,
-        preliminary=True,
+        preliminary=False,
         subtext="",
         own_work=False,
+        private_work=True,
         thesisstyle=False,
     ):
         additional_string = ""
@@ -166,8 +167,10 @@ class Plot(object):
         else:
             if preliminary:
                 additional_string = "Preliminary"
-            if own_work:
+            elif own_work:
                 additional_string = "Own Work"
+            elif private_work:
+                additional_string = "Private Work"
 
         if position == 0:
             styles.DrawCMSLogo(
