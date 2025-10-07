@@ -208,6 +208,7 @@ x_label:
     eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
+    deltaEta_ditaupair: "#Delta #eta (#mu, #tau_{h})"
 
     phi_1: "Muon #varphi"
     phi_2: "Hadronic Tau #varphi"
@@ -218,6 +219,8 @@ x_label:
     deltaR_ditaupair: "#Delta R (#mu, #tau_{h})"
     pzetamissvis: "p_{#zeta}^{miss} - 0.85 #upoint p_{#zeta}^{vis} (Puppi) / GeV"
     mass_2: "m_{#tau_{h}} /GeV"
+    deltaR_jj: "#Delta R (jj)"
+    deltaR_jj: "#Delta #eta (jj)"
 
     # Lepton quantities
     pt_1: "Muon p_{T} / GeV"
