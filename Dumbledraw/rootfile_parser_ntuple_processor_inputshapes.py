@@ -28,7 +28,6 @@ _dataset_map_no_emb = {
     "VVJ": "VV",
     "W": "W",
     "W_NLO": "WNLO",
-    "EMB": "EMB",
     "QCDEMB": "QCD",
     "QCD": "QCDMC",
     "jetFakesEMB": "jetFakes",
@@ -62,7 +61,6 @@ _process_map_no_emb = {
     "VVJ": "VV-VVJ",
     "W": "W",
     "W_NLO": "W",
-    "EMB": "Embedded",
     "QCDEMB": "QCD",
     "QCD": "QCDMC",
     "QCDEMB_NLO": "QCD_NLO",
@@ -84,15 +82,15 @@ class Rootfile_parser(object):
         self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._variable = variable
         self.es_range = es_range
-        emb_map_proc = {
-        f"emb{'minus' if val < 0 and not np.isclose(val, 0.0) else ''}{str(round(abs(val), 1)).replace('.', 'p')}": "Embedded"
-        for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1)
-        }
-        emb_map = {
-        f"emb{'minus' if val < 0 and not np.isclose(val, 0.0) else ''}{str(round(abs(val), 1)).replace('.', 'p')}":
-        f"emb{'minus' if val < 0 and not np.isclose(val, 0.0) else ''}{str(round(abs(val), 1)).replace('.', 'p')}"
-        for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1)
-        }
+        emb_map_proc = {"EMB": "Embedded",
+        **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}": 
+        "Embedded" for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
+        } }
+        emb_map = { "EMB": "EMB",
+        **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}":
+        f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}"
+        for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
+        }}
         self._dataset_map = {**_dataset_map_no_emb, **emb_map}
         self._process_map = {**_process_map_no_emb, **emb_map_proc}
 
