@@ -208,6 +208,9 @@ x_label:
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
 
+    # NN quantities
+    NN_score: "NN output"
+
     # Lepton quantities
     pt_1: "Muon p_{T} / GeV"
     pt_2: "Hadronic Tau p_{T} / GeV"
@@ -299,6 +302,9 @@ x_label:
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
 
+    # NN quantities
+    NN_score: "NN output"
+
     # Lepton quantities
     pt_1: "Electron p_{T} / GeV"
     pt_2: "Hadronic Tau p_{T} / GeV"
@@ -382,6 +388,9 @@ x_label:
     eta_fastmtt_pf: "fastMTT di-#tau #eta (PF)"
     pt_tt: "p_{T}(#tau#tau) (Puppi) / GeV"
     pt_tt_pf: "p_{T}(#tau#tau) (PF) / GeV"
+
+    # NN quantities
+    NN_score: "NN output"
 
     # Lepton quantities
     pt_1: "Leading hadronic Tau p_{T} / GeV"
@@ -1105,21 +1114,22 @@ x_label:
     ME_costhetastar: "MELA cos(#Theta*)"
     ME_phi: "MELA #Phi"
     ME_phi1: "MELA #Phi_{1}"
+
 legend_label:
-  rare: 'rare'
   rem_H: 'other H'
   qqH: "qq#rightarrowH"
   VH: "qq#rightarrowVH"
   WH: "qq#rightarrowWH"
-  ZTT: "Z#rightarrow#tau#tau"
   EMB: "#tau embedded"
   EMBCMB: "Z/t#bar{t}/VV#rightarrow#tau#tau"
   MUEMB: "#mu#rightarrow#mu embedded"
   TotalBkg: "Background"
   REST: "Sim. Bkg."
-  ZLL_mm: "Z#rightarrow#mu#mu"
+  Z: "Z#rightarrowll"
+  ZLL_mm: "Z"
   ZL: "Z#rightarrowll"
   ZJ: "Z#rightarrowll (jet#rightarrow^{}#tau_{h})"
+  ZTT: "Z#rightarrow#tau#tau"
   TTT: "t#bar{t} (#tau#tau)"
   TTL: "t#bar{t} (l#tau)"
   TTJ: "t#bar{t} (jet#rightarrow^{}#tau_{h})"
@@ -1131,8 +1141,9 @@ legend_label:
   VVJ: "Diboson (jet#rightarrow^{}#tau_{h})"
   VVL: "Diboson (l#tau)"
   ST: "Single t"
-  STT: "Single t"
-  STL: "Single t"
+  STT: "Single t (#tau#tau)"
+  STL: "Single t (l#tau)"
+  STJ: "Single t (jet#rightarrow^{}#tau_{h})"
   QCD: "QCD multijet"
   QCDEMB: "QCD multijet"
   EWK: "Electroweak"
@@ -1166,4 +1177,4 @@ legend_label:
   HTT: 'H#rightarrow#tau#tau'
   ggH: 'gg#rightarrowH'
   qqZH: 'qq#rightarrowZH'
-  ZLL: 'Z#rightarrowll'
+  rare: 'other'
