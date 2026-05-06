@@ -190,7 +190,8 @@ x_label:
   mt:
     # Dilepton Quantities
     yield: "Total Yield"
-    m_vis: "Visible di-#tau mass / GeV"
+    # m_vis: "Visible di-#tau mass / GeV"
+    m_vis: "m_{vis} [GeV]"
     pt_vis: "Visible di-#tau p_{T} / GeV"
     DiTauDeltaR: "#DeltaR(#mu, ^{}#tau_{h})"
     m_sv: "SVFit di-#tau mass (Puppi) / GeV"
@@ -1146,6 +1147,9 @@ legend_label:
   jetFakesQCD: "Jet#rightarrow^{}#tau_{h} (QCD)"
   jetFakesTT: "Jet#rightarrow^{}#tau_{h} (TT)"
   jetFakesEMB: "Jet#rightarrow^{}#tau_{h}"
+  jetFakesData: "Jet#rightarrow^{}#tau_{h} (Data)"
+  jetFakesMC: "Jet#rightarrow^{}#tau_{h} (MC)"
+  lepFakes: "e/#mu#rightarrow^{}#tau_{#mu}"
   data_obs: "Data"
   VHWW: 'VH#rightarrowWW'
   VVV: "VVV"

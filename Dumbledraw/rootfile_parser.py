@@ -21,6 +21,7 @@ def get_custom_binning(era, channel, tag, category):
         era = era.replace("Run", "")
     if tag != "mm":
         yaml_filename = f"/work/jvoss/ntuples/smhtt_ul_SFs/config/gof_binning/binning_{era}_{channel}_{tag}.yaml"
+        print("\n[WARNING] Using hard coded path to binning file!!!\n")
         with open(yaml_filename, "r") as f:
             binning_info = yaml.safe_load(f)
         # The correct key is given by the category value.

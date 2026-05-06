@@ -82,18 +82,21 @@ class Rootfile_parser(object):
         self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._variable = variable
         self.es_range = es_range
-        emb_map_proc = {"EMB": "Embedded",
-        **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}": 
-        "Embedded" for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
-        } }
-        emb_map = { "EMB": "EMB",
-        **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}":
-        f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}"
-        for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
-        }}
-        self._dataset_map = {**_dataset_map_no_emb, **emb_map}
-        self._process_map = {**_process_map_no_emb, **emb_map_proc}
-
+        if None not in es_range:
+            emb_map_proc = {"EMB": "Embedded",
+            **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}": 
+            "Embedded" for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
+            } }
+            emb_map = { "EMB": "EMB",
+            **{f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}":
+            f"emb{'minus' if val < 0 else ''}{str(round(abs(val), 1)).replace('.', 'p')}"
+            for val in np.arange(self.es_range[1], self.es_range[0] - 0.1, -0.1) if val != 0.0
+            }}
+            self._dataset_map = {**_dataset_map_no_emb, **emb_map}
+            self._process_map = {**_process_map_no_emb, **emb_map_proc}
+        else:
+            self._dataset_map = copy.deepcopy(_dataset_map_no_emb)
+            self._process_map = copy.deepcopy(_process_map_no_emb)
     @property
     def rootfile(self):
         return self._rootfile
