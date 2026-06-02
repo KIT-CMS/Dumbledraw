@@ -391,6 +391,8 @@ def DrawCMSLogo(
     elif iPosX % 10 == 3:
         posX_ = 1 - r - relPosX * (1 - l - r)
 
+    posX_ = posX_ + 0.06
+
     posY_ = 1 - t - relPosY * (1 - t - b)
     if not outOfFrame:
         if thesisstyle:

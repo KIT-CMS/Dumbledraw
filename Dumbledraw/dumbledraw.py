@@ -172,7 +172,7 @@ class Plot(object):
         if position == 0:
             styles.DrawCMSLogo(
                 self._subplots[0]._pad,
-                "CMS",
+                "Private Work",
                 additional_string,
                 11,
                 0.115,
@@ -1080,7 +1080,7 @@ class Legend(object):
             )
         if pos == 3:
             self._legend = R.TLegend(
-                1 - r - o - w, 1 - t - o - h, 1 - r - o, 1 - t - o, "", "NBNDC"
+                1 - r - o - w + 0.05, 1 - t - o - h, 1 - r - o, 1 - t - o, "", "NBNDC"
             )
         if pos == 4:
             self._legend = R.TLegend(l + o, b + o, l + o + w, b + o + h, "", "NBNDC")

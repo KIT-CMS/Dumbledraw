@@ -17,14 +17,14 @@ colors:
   ZTT_NLO: '#ffa90e'
 
   # jetfakes
-  jetFakes: '#b9ac70'
-  jetFakesCMB: '#b9ac70'
-  jetFakesEMB: '#b9ac70'
+  jetFakes: '#94a4a2'
+  jetFakesCMB: '#94a4a2'
+  jetFakesEMB: '#94a4a2'
   jetFakesQCD: '#717581'
   jetFakesTT: '#832db6'
   jetFakesW: '#e76300'
-  ZJ: '#b9ac70'
-  ZJ_NLO: '#b9ac70'
+  ZJ: '#9abbd9' #not official palette, lighter blue than ZL
+  ZJ_NLO: '#9abbd9' #not official palette, lighter blue than ZL
 
   # ZL
   ZL: '#3f90da'
@@ -46,15 +46,15 @@ colors:
 
   # TTbar
   TT: '#832db6'
-  TTL: '#615fc8' # mix of ZL and TT, not in the official palette
-  TTT: '#832db6'
-  TTJ: '#964c88' # mix of jetfakes and TT, not in the official palette
+  TTL: '#832db6' 
+  TTT: '#a963d1' #not official palette, lighter purple
+  TTJ: '#c59ade' #not official palette, even lighter purple
 
   # Diboson
-  VV: '#94a4a2'
-  VVL: '#6a9abe' # mix of ZL and VV, not in the official palette
-  VVT: '#94a4a2'
-  VVJ: '#9f887e' # mix of jetfakes and VV, not in the official palette
+  VV: '#92dadd'
+  VVL: '#27ad9e' #not official palette, darker grayish cyan
+  VVT: '#69c7bc' #not official palette, lighter grayish cyan
+  VVJ: '#92dadd' 
 
   # W
   W: '#e76300'
@@ -71,10 +71,10 @@ colors:
 
 
 # Signals
-  ggH: '#92dadd'
+  ggH: '#5790fc'
   qqH: '#bd1f01'
   ggH_hww: '#93bfbf' # mix of VV and ggH, not in the official palette
-  qqH_hww: '#a96151' # mix of VV and qqH, not in the official palette
+  qqH_hww: '#94a4a2' # mix of VV and qqH, not in the official palette
   HWW: '#94a4a2'
   ttH: '#832db6'
   ZH: '#3f90da'

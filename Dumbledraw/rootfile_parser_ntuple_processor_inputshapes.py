@@ -37,6 +37,8 @@ class Rootfile_parser(object):
         "jetFakes_NLO": "jetFakesMC_NLO",
         "ggH125": "ggH",
         "qqH125": "qqH",
+        "VH125": "VH",
+        "ttH125": "ttH",
         "wFakes": "wFakes",
     }
 
@@ -65,6 +67,8 @@ class Rootfile_parser(object):
         "jetFakes": "jetFakesMC",
         "ggH125": "ggH125",
         "qqH125": "qqH125",
+        "VH125": "VH125",
+        "ttH125": "ttH125",
         "wFakes": "wFakes",
     }
 
