@@ -73,13 +73,14 @@ class Rootfile_parser(object):
     }
 
     def __init__(self, inputrootfilename, variable):
-        self._rootfilename = inputrootfilename
-        self._rootfile = ROOT.TFile(self._rootfilename, "READ")
         self._variable = variable
-
-    @property
-    def rootfile(self):
-        return self._rootfile
+        # Accept both a single string and a list
+        if isinstance(inputrootfilename, str):
+            inputrootfilename = [inputrootfilename]
+        self._rootfilenames = inputrootfilename
+        self._rootfiles = [ROOT.TFile(f, "READ") for f in self._rootfilenames]
+        # Keep backward compat: expose first file as .rootfile
+        self._rootfile = self._rootfiles[0]
 
     def get(self, channel, process, category=None, shape_type="Nominal"):
         dataset = self._dataset_map[process]
@@ -98,31 +99,23 @@ class Rootfile_parser(object):
             shape_type=shape_type,
             variable=self._variable,
         )
-        logger.debug("Try to access %s in %s" % (hist_hash, self._rootfilename))
-        print("rootfile: ", self._rootfile.Get(hist_hash), " hash: ", hist_hash)
+        logger.debug("Try to access %s" % hist_hash)
 
-        return self._rootfile.Get(hist_hash)
+        combined = None
+        for rootfile in self._rootfiles:
+            h = rootfile.Get(hist_hash)
+            if not h:
+                logger.warning("Hash %s not found in %s" % (hist_hash, rootfile.GetName()))
+                continue
+            if combined is None:
+                combined = copy.deepcopy(h)  # deepcopy so we don't modify the in-file object
+            else:
+                combined.Add(h)
 
-    def list_contents(self):
-        return [key.GetTitle() for key in self._rootfile.GetListOfKeys()]
-
-    def get_bins(self, channel, category):
-        hist = self.get(channel, category)
-        nbins = hist.GetNbinsX()
-        bins = []
-        for i in range(nbins):
-            bins.append(hist.GetBinLowEdge(i + 1))
-        bins.append(hist.GetBinLowEdge(i + 1) + hist.GetBinWidth(i + 1))
-        return bins
-
-    def get_values(self, channel, category):
-        hist = self.get(channel, category)
-        nbins = hist.GetNbinsX()
-        values = []
-        for i in range(nbins):
-            values.append(hist.GetBinContent(i + 1))
-        return values
+        print("rootfile: ", combined, " hash: ", hist_hash)
+        return combined
 
     def __del__(self):
-        logger.debug("Closing rootfile %s" % (self._rootfilename))
-        self._rootfile.Close()
+        for f in self._rootfiles:
+            logger.debug("Closing rootfile %s" % f.GetName())
+            f.Close()
